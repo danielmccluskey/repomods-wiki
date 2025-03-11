@@ -19,14 +19,16 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-        { text: 'Get Started', link: '/overview.md' },
+        { text: 'Get Started', link: '/overview' },
+        { text: 'Developing Mods', link: '/develop' }
     ],
 
     sidebar: [
       {
         text: 'Get Started',
         items: [
-          { text: 'Overview', link: '/overview' }
+          { text: 'Overview', link: '/overview' },
+          { text: 'Developing Mods', link: '/develop' }
         ]
       }
     ],
