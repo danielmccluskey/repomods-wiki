@@ -8,6 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+  name: SplitStats Machine
 
 steps:
 - script: echo Hello, world!
