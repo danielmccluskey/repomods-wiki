@@ -19,8 +19,8 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-        { text: 'Get Started', link: '/overview' },
-        { text: 'Developing Mods', link: '/develop' }
+        { text: 'Get Started', link: '/overview.md' },
+        { text: 'Developing Mods', link: '/develop.md' }
     ],
 
     sidebar: [
