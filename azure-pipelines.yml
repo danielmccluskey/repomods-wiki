@@ -1,0 +1,24 @@
+trigger:
+- main  # Runs pipeline when changes are pushed to the main branch
+
+pool:
+  name: SplitStats Machine  # Uses the existing agent on your Windows Server
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.20.4'  # Ensures correct Node.js version
+
+- script: |
+    cd "$(Build.SourcesDirectory)\repomoddingwiki"
+    npm install
+    npm run build
+  displayName: 'Build VitePress site'
+
+- script: |
+    robocopy "$(Build.SourcesDirectory)\repomoddingwiki\docs\.vitepress\dist" "C:\IISSites\repomodswiki" /MIR
+  displayName: 'Deploy to IIS'
+
+- script: |
+    iisreset
+  displayName: 'Restart IIS'
