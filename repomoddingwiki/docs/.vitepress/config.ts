@@ -22,12 +22,14 @@ export default defineConfig({
         { text: 'Get Started', link: '/overview.md' },
     ],
 
-    sidebar: {
-      '/': [
-        { text: 'Get Started', link: '/overview.md' },
-        
-      ],
-    },
+    sidebar: [
+      {
+        text: 'Get Started',
+        items: [
+          { text: 'Overview', link: '/overview' }
+        ]
+      }
+    ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/danielmccluskey/repomods-wiki' },
