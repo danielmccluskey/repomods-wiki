@@ -5,8 +5,15 @@ export default defineConfig({
   description: 'A community-driven wiki for R.E.P.O. modding, guides, and resources.',
   lang: 'en-US',
 
+  head: [
+    ['link', { rel:'icon', href: "/favicon.ico" }],
+    ['meta', { property: 'og:site_name', content: "R.E.P.O. Modding Wiki" }],
+    ['meta', { property: 'og:image', content: "https://repomods.com/icon.png" }],
+    ['meta', { name: 'theme-color', content: "#ffaf00" }]
+  ],
+
   themeConfig: {
-    logo: '/repo-logo.png', // Place an image in docs/public/repo-logo.png
+    logo: '/icon.png', // Place an image in docs/public/repo-logo.png
 
     nav: [
       { text: 'Home', link: '/' },
