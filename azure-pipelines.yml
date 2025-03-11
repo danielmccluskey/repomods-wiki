@@ -11,12 +11,23 @@ steps:
 
 - script: |
     cd "$(Build.SourcesDirectory)\repomoddingwiki"
+    echo "Current Directory:"
+    pwd
+    echo "Installing dependencies..."
     npm install
+    echo "Building VitePress site..."
     npm run build
   displayName: 'Build VitePress site'
 
 - script: |
-    robocopy "$(Build.SourcesDirectory)\repomoddingwiki\docs\.vitepress\dist" "C:\IISSites\repomodswiki" /MIR
+    echo "Checking if build output exists..."
+    if exist "$(Build.SourcesDirectory)\repomoddingwiki\docs\.vitepress\dist\index.html" (
+        echo "Build successful, proceeding with deployment..."
+        robocopy "$(Build.SourcesDirectory)\repomoddingwiki\docs\.vitepress\dist" "C:\IISSites\repomodswiki" /MIR
+    ) else (
+        echo "Build failed! No dist/index.html found."
+        exit /b 1
+    )
   displayName: 'Deploy to IIS'
 
 - script: |
