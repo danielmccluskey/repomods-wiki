@@ -38,7 +38,7 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/vPJtKhYAFe' }
     ],
     editLink: {
-      pattern: 'https://github.com/danielmccluskey/repomods-wiki/edit/main/docs/:path',
+      pattern: 'https://github.com/danielmccluskey/repomods-wiki/edit/main/repomoddingwiki/docs/:path',
     },
     footer: {
       message: 'This wiki is community-driven and open-source.',
