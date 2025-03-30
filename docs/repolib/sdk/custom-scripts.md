@@ -1,0 +1,16 @@
+# Using Custom Scripts with REPOLib-Sdk
+
+Unfortunately, custom scripts cannot be developed from inside the Unity editor. Instead, you have to write your scripts elsewhere:
+
+- Create a new C# project for R.E.P.O. modding.
+  - There are templates available for this, for example [linkoid's Repo Sdks](https://github.com/linkoid/Repo.Sdks) and [Matty's Mod Templates](https://discord.com/channels/1344557689979670578/1348716513410027601) (discord thread link).
+- Write your scripts in that project.
+- Build the project and copy the output dll into your Unity project.
+- If needed, copy the BepInEx dlls to your project.
+  - If you used the [R.E.P.O. Project Patcher](https://github.com/Kesomannen/unity-repo-project-patcher), these will already be in your project.
+- Attach the scripts to your prefabs.
+- Include the dll in the `Extra Files` field on your `Mod` asset.
+
+::: tip
+You can use a MSBuild target to automatically copy the dll on each build.
+:::
