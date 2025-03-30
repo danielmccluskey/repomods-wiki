@@ -1,4 +1,8 @@
-# Getting Started with REPOLib
+# Getting Started with REPOLib (C#)
+
+This page assumes you have a C# project setup for R.E.P.O. modding. If not, first follow the guide in [Developing Mods](../../develop.md).
+
+## Installation
 
 Reference [REPOLib](https://www.nuget.org/packages/Zehs.REPOLib) in your project's `.csproj` file:
 

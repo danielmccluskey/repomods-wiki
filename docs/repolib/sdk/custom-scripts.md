@@ -2,8 +2,7 @@
 
 Unfortunately, custom scripts cannot be developed from inside the Unity editor. Instead, you have to write your scripts elsewhere:
 
-- Create a new C# project for R.E.P.O. modding.
-  - There are templates available for this, for example [linkoid's Repo Sdks](https://github.com/linkoid/Repo.Sdks) and [Matty's Mod Templates](https://discord.com/channels/1344557689979670578/1348716513410027601) (discord thread link).
+- Create a new C# project for R.E.P.O. modding (see [Developing Mods](../../develop.md)).
 - Write your scripts in that project.
 - Build the project and copy the output dll into your Unity project.
 - If needed, copy the BepInEx dlls to your project.
