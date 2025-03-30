@@ -33,79 +33,79 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/overview" },
           { text: "Developing Mods", link: "/develop" },
+        ],
+      },
+      {
+        text: "REPOLib",
+        items: [
+          { text: "Overview", link: "/repolib/overview.md" },
           {
-            text: "Using REPOLib",
+            text: "API",
             items: [
-              { text: "Overview", link: "/repolib/overview.md" },
               {
-                text: "API",
-                items: [
-                  {
-                    text: "Getting Started",
-                    link: "/repolib/api/start.md",
-                  },
-                  {
-                    text: "Bundle Loading",
-                    link: "/repolib/api/bundles.md",
-                  },
-                  {
-                    text: "Fixing Audio Mixer Groups",
-                    link: "/repolib/api/audio-mixer-groups.md",
-                  },
-                  {
-                    text: "Chat Commands",
-                    link: "/repolib/api/commands.md",
-                  },
-                  {
-                    text: "Enemies",
-                    link: "/repolib/api/enemies.md",
-                  },
-                  {
-                    text: "Shop Items",
-                    link: "/repolib/api/items.md",
-                  },
-                  {
-                    text: "Network Events",
-                    link: "/repolib/api/network-events.md",
-                  },
-                  {
-                    text: "Network Prefabs",
-                    link: "/repolib/api/network-prefabs.md",
-                  },
-                  {
-                    text: "Valuables",
-                    link: "/repolib/api/valuables.md",
-                  },
-                ],
+                text: "Getting Started",
+                link: "/repolib/api/start.md",
               },
               {
-                text: "SDK",
-                items: [
-                  {
-                    text: "Getting Started",
-                    link: "/repolib/sdk/start.md",
-                  },
-                  {
-                    text: "Custom Scripts",
-                    link: "/repolib/sdk/custom-scripts.md",
-                  },
-                  {
-                    text: "Enemies",
-                    link: "/repolib/sdk/enemies.md",
-                  },
-                  {
-                    text: "Levels",
-                    link: "/repolib/sdk/levels.md",
-                  },
-                  {
-                    text: "Shop Items",
-                    link: "/repolib/sdk/items.md",
-                  },
-                  {
-                    text: "Valuables",
-                    link: "/repolib/sdk/valuables.md",
-                  },
-                ],
+                text: "Bundle Loading",
+                link: "/repolib/api/bundles.md",
+              },
+              {
+                text: "Fixing Audio Mixer Groups",
+                link: "/repolib/api/audio-mixer-groups.md",
+              },
+              {
+                text: "Chat Commands",
+                link: "/repolib/api/commands.md",
+              },
+              {
+                text: "Enemies",
+                link: "/repolib/api/enemies.md",
+              },
+              {
+                text: "Shop Items",
+                link: "/repolib/api/items.md",
+              },
+              {
+                text: "Network Events",
+                link: "/repolib/api/network-events.md",
+              },
+              {
+                text: "Network Prefabs",
+                link: "/repolib/api/network-prefabs.md",
+              },
+              {
+                text: "Valuables",
+                link: "/repolib/api/valuables.md",
+              },
+            ],
+          },
+          {
+            text: "SDK",
+            items: [
+              {
+                text: "Getting Started",
+                link: "/repolib/sdk/start.md",
+              },
+              {
+                text: "Custom Scripts",
+                link: "/repolib/sdk/custom-scripts.md",
+              },
+              {
+                text: "Enemies",
+                link: "/repolib/sdk/enemies.md",
+              },
+              {
+                text: "Levels",
+                link: "/repolib/sdk/levels.md",
+              },
+              {
+                text: "Shop Items",
+                link: "/repolib/sdk/items.md",
+              },
+              {
+                text: "Valuables",
+                link: "/repolib/sdk/valuables.md",
               },
             ],
           },
