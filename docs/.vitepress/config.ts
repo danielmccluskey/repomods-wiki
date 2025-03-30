@@ -45,6 +45,10 @@ export default defineConfig({
                     link: "/repolib/api/start.md",
                   },
                   {
+                    text: "Bundle Loading",
+                    link: "/repolib/api/bundles.md",
+                  },
+                  {
                     text: "Fixing Audio Mixer Groups",
                     link: "/repolib/api/audio-mixer-groups.md",
                   },
