@@ -40,8 +40,6 @@ Each `Mod` has its own folder with its content. Here's an example file hierarchy
 - Assets
     - MyModFolder
         - MyMod.asset
-        - README.md
-        - CoolIcon.png
         - MyValuable.asset // content asset, references the prefab
         - MyValuablePrefab.prefab
         - EnemyFolder
