@@ -22,7 +22,7 @@ BundleLoader.LoadBundle(
     // Callback when the bundle has finished loading, 
     // which is guaranteed to happen before the player joins a lobby.
     //
-    // Note that this needs to return an IEnumerator.
+    // This can either be a normal method or a coroutine (by returning IEnumerator).
     OnBundleLoaded,
     // If this is true, REPOLib will load and register all Content assets
     // from the bundle, as if it was loaded automatically.
@@ -31,7 +31,8 @@ BundleLoader.LoadBundle(
     loadContents: true
 );
 
-IEnumerator OnBundleLoaded(AssetBundle bundle) {
+IEnumerator OnBundleLoaded(AssetBundle bundle) 
+{
     Debug.Log("My bundle was loaded!");
     
     // Do some more (asynchronous) setup logic,

@@ -6,8 +6,6 @@ Creating a networked event:
 using ExitGames.Client.Photon;
 using REPOLib.Modules;
 
-[BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
 public class YourMod : BaseUnityPlugin
 {
     // ...

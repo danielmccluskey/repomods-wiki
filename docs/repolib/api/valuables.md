@@ -3,51 +3,33 @@
 Registering a valuable:
 
 ```c#
-[BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
-public class YourMod : BaseUnityPlugin
+private void Awake()
 {
-    // ...
-
-    private void Awake()
+    REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle => 
     {
-        // ...
-
-        AssetBundle assetBundle = AssetBundle.LoadFromFile("your_assetbundle_file_path");
-        GameObject prefab = assetBundle.LoadAsset<GameObject>("your_valuable_prefab");
-
-        // Register a valuable.
+        var prefab = assetBundle.LoadAsset<GameObject>("your_valuable_prefab");
         REPOLib.Modules.Valuables.RegisterValuable(prefab);
-    }
+    });
 }
 ```
 
 Registering a valuable to a specific level:
 
 ```c#
-[BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
-public class YourMod : BaseUnityPlugin
+private void Awake()
 {
-    // ...
-
-    private void Awake()
+    REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle => 
     {
-        // ...
+        var prefab = assetBundle.LoadAsset<GameObject>("your_valuable_prefab");
 
-        AssetBundle assetBundle = AssetBundle.LoadFromFile("your_assetbundle_file_path");
-        GameObject prefab = assetBundle.LoadAsset<GameObject>("your_valuable_prefab");
-
-        // Valuables Presets:
+        // Vanilla Valuables Presets:
         // "Valuables - Generic"
         // "Valuables - Wizard"
         // "Valuables - Manor"
         // "Valuables - Arctic"
 
-        List<string> presets = new List<string> { "Valuables - Wizard" };
-
-        // Register a valuable.
+        var presets = new List<string> { "Valuables - Wizard" };
         REPOLib.Modules.Valuables.RegisterValuable(prefab, presets);
-    }
+    });
 }
 ```

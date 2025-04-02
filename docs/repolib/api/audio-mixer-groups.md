@@ -1,25 +1,20 @@
 # Fixing Audio Mixer Groups with REPOLib
 
-Fixing audio mixer groups on a prefab and their children:
+Matches audio mixer groups from bundled assets with the real runtime equivalents.
+
+Fixing audio mixer groups on a prefab and its children:
 
 ```c#
-[BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
-public class YourMod : BaseUnityPlugin
+private void Awake()
 {
-    // ...
-
-    private void Awake()
+    REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle => 
     {
-        // ...
-
-        AssetBundle assetBundle = AssetBundle.LoadFromFile("your_assetbundle_file_path");
-        GameObject prefab = assetBundle.LoadAsset<GameObject>("your_prefab");
-
-        // Fix the audio mixer groups on a prefab and their children.
+        var prefab = assetBundle.LoadAsset<GameObject>("your_prefab");
         REPOLib.Modules.Utilities.FixAudioMixerGroups(prefab);
-    }
+    });
 }
 ```
 
-Registering any features will automatically fix their prefabs audio mixer groups.
+::: tip
+You rarely need to do this manually, as registering features will automatically fix their prefabs' mixer groups.
+:::
