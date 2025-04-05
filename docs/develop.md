@@ -10,6 +10,8 @@ The following tools should be installed:
 - **Git**: Highly recommended for version control.
 - **BepInEx**: The mod loader. This either should be installed with the game directly, or there should be a dedicated development profile in a mod manager.
 
+While R.E.P.O is technically playable on different Operating Systems, this Documentation assumes that development is done on a Windows Machine.
+Since a lot of virtualization is involved when running the Game on Linux, debugging a plugin that is in development becomes immensely more complicated.
 
 # Creating a Plugin Project
 
@@ -25,7 +27,7 @@ This tutorial walks through the process of developing a BepInEx mod for R.E.P.O.
 
 ## I. Setting Up the Project
 
-There are two method to setup a project. Using a template, or starting from scratch.
+There are two methods to setup a project. Using a template, or starting from scratch.
 
 ### A. Creating a New Plugin from a Template
 
@@ -84,7 +86,7 @@ A standard C# project without a template can also be used (though not recomended
    ```
 
 
-## II. Organazation and Configuration
+## II. Organization and Configuration
 
 It is recomended to have a folder for all the modding projects to be placed in.
 
