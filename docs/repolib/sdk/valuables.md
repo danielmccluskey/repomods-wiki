@@ -75,7 +75,7 @@ Here are some reasonable values for our Among Us valuable:
 
 ![Screenshot](/repolib/sdk/valuables/7.png)
 
-The last step is to set our object's bounds in the `Room Volume Check` component. The easiest way to do this is to import Zehs' custom editor script. [Download it here]() and drag it into `Assets`. 
+The last step is to set our object's bounds in the `Room Volume Check` component. The easiest way to do this is to import Zehs' custom editor script. [Download it here](https://raw.githubusercontent.com/ZehsTeam/REPOLib-Sdk/refs/heads/main/Scripts/RoomVolumeCheckEditor.cs) and drag it into `Assets`. 
 
 After that, you should see this button in the inspector: 
 
