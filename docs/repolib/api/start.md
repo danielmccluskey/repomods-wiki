@@ -8,7 +8,7 @@ Reference [REPOLib](https://www.nuget.org/packages/Zehs.REPOLib) in your project
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Zehs.REPOLib" Version="1.*" />
+  <PackageReference Include="Zehs.REPOLib" Version="2.*" />
 </ItemGroup>
 ```
 
