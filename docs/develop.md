@@ -10,6 +10,7 @@ The following tools should be installed:
 - **Git**: Highly recommended for version control.
 - **BepInEx**: The mod loader. This either should be installed with the game directly, or there should be a dedicated development profile in a mod manager.
 
+
 # Creating a Plugin Project
 
 This tutorial walks through the process of developing a BepInEx mod for R.E.P.O. using [Repo Modding SDKs and Templates](https://github.com/linkoid/Repo.Sdks#readme). This streamlines mod development by automating game detection, using best practices, and simplifying the build process.
