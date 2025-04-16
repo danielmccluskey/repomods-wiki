@@ -96,16 +96,25 @@ export default defineConfig({
                 link: "/repolib/sdk/enemies.md",
               },
               {
-                text: "Levels",
-                link: "/repolib/sdk/levels.md",
-              },
-              {
                 text: "Shop Items",
                 link: "/repolib/sdk/items.md",
               },
               {
                 text: "Valuables",
                 link: "/repolib/sdk/valuables.md",
+              },
+            ],
+          },
+          {
+            text: "Levels",
+            items: [
+              {
+                text: "Registering",
+                link: "/repolib/levels/start.md",
+              },
+              {
+                text: "Modules",
+                link: "/repolib/levels/modules.md",
               },
             ],
           },

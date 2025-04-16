@@ -9,10 +9,11 @@
 
 ## Proxy Valuable Presets
 
-To use vanilla `Level Valuables` presets in your levels, you should not simply reference them in the `Level` asset. This is because the bundle will then contain duplicates of all the vanilla valuables from that preset. Instead, you have to create a "proxy" preset:
+To use non-generic valuable presets in your level, you should not simply reference them in the `Level` asset. This is because the bundle will then contain duplicates of the valuables from that preset. Instead, you have to create a "proxy" preset:
 
 - Create a `Level Valuables` anywhere in your project by going to `Create > Level > Level Valuable Preset`
-- Name the asset exactly as the vanilla one you want to include (see [Create a valuable](#create-a-valuable)).
-- Add your newly created preset to `Level Valuables` in your `Level` asset.
+  - For vanilla presets, name it exactly as the original (see [Create a valuable](#create-a-valuable) for those values).
+  - For custom presets, you are free to choose any name. However, it's recommended to stick to the `Valuables - ` naming convention.
+- Add your newly created preset to `Level Valuables` list in your `Level` asset.
 
 At runtime, REPOLib will match the name and replace your proxy with the real thing.
