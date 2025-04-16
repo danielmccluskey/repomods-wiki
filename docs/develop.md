@@ -25,7 +25,7 @@ This tutorial walks through the process of developing a BepInEx mod for R.E.P.O.
 
 ## I. Setting Up the Project
 
-There are two method to setup a project. Using a template, or starting from scratch.
+There are two methods to setup a project. Using a template, or starting from scratch.
 
 ### A. Creating a New Plugin from a Template
 
@@ -84,7 +84,7 @@ A standard C# project without a template can also be used (though not recomended
    ```
 
 
-## II. Organazation and Configuration
+## II. Organization and Configuration
 
 It is recomended to have a folder for all the modding projects to be placed in.
 
