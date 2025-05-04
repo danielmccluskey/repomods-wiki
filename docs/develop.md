@@ -97,7 +97,7 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
    
    Place a `Directory.Repo.props` file in either the home directory, the folder containg all the mods, or the root of the mod project.
 
-   Here is an eaxample folder hierarchy:
+   Here is an example folder hierarchy:
     - 📁 My Projects
        - 📁 My REPO Projects
           - 📄 **Directory.Repo.Props**
