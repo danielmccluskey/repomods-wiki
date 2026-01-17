@@ -1,5 +1,14 @@
 # Creating Levels with REPOLib-Sdk
 
+::: warning NOTICE
+This Page is currently Work in Progress!
+:::
+
+::: info NOTE
+**This guide assumes you have a Unity project set up for REPOLib modding.\
+If not, follow [Getting Started](./start.md) first.**
+:::
+
 - Create a `Level` by right clicking and going to `Create > Level > Level Preset`.
   - The patcher outputs vanilla levels to `Assets/REPO/Game/ScriptableObjects/Level` and their assets to `Assets/REPO/Game/Resources/level`.
 - On the `Level` asset, make sure that the `Valuable Presets` list is empty.

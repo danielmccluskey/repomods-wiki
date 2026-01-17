@@ -61,7 +61,7 @@ The templates are currently being updated, so be sure to run this command every 
    dotnet new repoharmony --help
    ```
 
-### B. Creating a Project from Scratch
+### B. Creating a Project from Scratch (Not using Templates)
 
 A standard C# project without a template can also be used (though not recomended). This section will also describe how to add the Repo SDKs to an existing project.
 
@@ -129,10 +129,56 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
    ::: 
 
 ### Adding NuGet Sources
-   TODO
+You can add these as either a global or a Project-specific NuGet source.
+> This example uses the BepInEx NuGet source.
+
+#### A. Add as a global NuGet source
+Run the following command in your terminal:
+```cmd
+dotnet nuget add source https://nuget.bepinex.dev/v3/index.json -n BepInEx
+```
+
+#### B. Add as a Project NuGet source
+Alternatively, edit you're `.csproj` file and add the following:
+```xml
+<!-- Add Nuget Sources -->
+	<PropertyGroup>
+		<RestoreAdditionalProjectSources>
+			https://nuget.bepinex.dev/v3/index.json; <!-- BepInEx NuGet feed -->
+		</RestoreAdditionalProjectSources>
+	</PropertyGroup>
+```
 
 ### Adding Thunderstore Dependencies
-   TODO
+
+::: info NOTE
+Make sure you have added the Thunderstore NuGet feed to your NuGet Sources or `.csproj` file.
+```
+https://nuget.windows10ce.com/nuget/v3/index.json
+```
+The Domain is owned by an Official [Thunderstore Staff Member](https://github.com/Windows10CE).
+:::
+
+You can add a Thunderstore dependency to you're `.csproj` like any other NuGet Package:
+> This example uses [Nickklmao's MenuLib](https://thunderstore.io/c/repo/p/nickklmao/MenuLib/) mod.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Nickklmao-MenuLib" Version="2.*" />
+</ItemGroup>
+```
+
+After updating your file, you ***may*** need to run:
+
+```cmd
+dotnet restore
+```
+
+You are now ready to start coding with the new dependency.
+
+::: tip
+Don't forget to update the (Major-)versions as updates get released for the packages.
+:::
 
 
 ## III. Building & Running the Mod

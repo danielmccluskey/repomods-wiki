@@ -12,4 +12,5 @@ There are two main ways to use REPOLib:
 - [**Via the C# API.**](./api/start.md) The most flexible, but requires coding.
 - [**Via the Unity Editor.**](./sdk/start.md) Does not require coding, but is less flexible.
 
-Which method to choose depends on your experience level and project scope. For new modders and smaller projects, the Unity workflow is recommended.
+Which method to choose depends on your experience level and project scope.\
+For new modders and smaller projects, the Unity workflow is recommended.

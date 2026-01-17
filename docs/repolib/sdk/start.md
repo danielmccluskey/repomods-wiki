@@ -2,7 +2,10 @@
 
 The Unity workflow is used to create content for REPOLib without writing code.
 
-This guide assumes you already have a Unity project set up for R.E.P.O. modding. If not, use a tool like [R.E.P.O. Project Patcher](https://github.com/Kesomannen/unity-repo-project-patcher) first.
+::: info NOTE
+This guide assumes you already have a Unity project set up for R.E.P.O. modding.\
+If not, use a tool like [R.E.P.O. Project Patcher](https://github.com/ZehsTeam/unity-repo-project-patcher) first.
+:::
 
 ## Installation
 
@@ -15,7 +18,7 @@ You will need to install two packages:
 
 1. Download REPOLib from Thunderstore ([link](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)).
 2. Extract the downloaded file.
-3. Copy `REPOLib.dll` into your project.
+3. Copy `REPOLib.dll` into your projects `Plugin` Folder (if it doesn't exist, create it).
 
 ::: tip
 To update REPOLib, replace the dll with a newer version's.
