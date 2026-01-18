@@ -4,7 +4,7 @@ REPOLib loads bundles under the `BepInEx/plugins` folder that have the `.repobun
 which allows for codeless registration of features in tandem with [REPOLib-Sdk](https://github.com/ZehsTeam/REPOLib-Sdk).
 
 ::: info NOTE
-if your bundle uses the `.repobundle` extension but does not include a `Mod` or `Content` asset,\
+If your bundle uses the `.repobundle` extension but does not include a `Mod` or `Content` asset,\
 **it will fail to load.** You can still load your bundle manually by removing the `.repobundle` extension\
 and using the Public `BundleLoader` methods, as stated below. For specific examples, look at the corresponding guide pages.
 :::
