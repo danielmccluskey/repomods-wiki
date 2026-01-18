@@ -139,7 +139,7 @@ dotnet nuget add source https://nuget.bepinex.dev/v3/index.json -n BepInEx
 ```
 
 #### B. Add as a Project NuGet source
-Alternatively, edit you're `.csproj` file and add the following:
+Alternatively, edit your `.csproj` file and add the following:
 ```xml
 <!-- Add Nuget Sources -->
 	<PropertyGroup>
@@ -159,7 +159,7 @@ https://nuget.windows10ce.com/nuget/v3/index.json
 The Domain is owned by an Official [Thunderstore Staff Member](https://github.com/Windows10CE).
 :::
 
-You can add a Thunderstore dependency to you're `.csproj` like any other NuGet Package:
+You can add a Thunderstore dependency to your `.csproj` like any other NuGet Package:
 > This example uses [Nickklmao's MenuLib](https://thunderstore.io/c/repo/p/nickklmao/MenuLib/) mod.
 
 ```xml
