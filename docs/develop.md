@@ -144,6 +144,7 @@ Alternatively, edit your `.csproj` file and add the following:
 <!-- Add Nuget Sources -->
 	<PropertyGroup>
 		<RestoreAdditionalProjectSources>
+         https://api.nuget.org/v3/index.json; <!-- Official NuGet feed -->
 			https://nuget.bepinex.dev/v3/index.json; <!-- BepInEx NuGet feed -->
 		</RestoreAdditionalProjectSources>
 	</PropertyGroup>
