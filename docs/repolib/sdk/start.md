@@ -18,7 +18,7 @@ You will need to install two packages:
 
 1. Download REPOLib from Thunderstore ([link](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)).
 2. Extract the downloaded file.
-3. Copy `REPOLib.dll` into your projects `Plugin` Folder (if it doesn't exist, create it).
+3. Copy `REPOLib.dll` into your project.
 
 ::: tip
 To update REPOLib, replace the dll with a newer version's.
