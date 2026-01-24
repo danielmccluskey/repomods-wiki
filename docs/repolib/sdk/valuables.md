@@ -1,21 +1,32 @@
 # Creating Valuables with REPOLib-Sdk
 
-- Right click in your mod's folder and choose `Create > REPOLib > Valuable`.
+::: info NOTE
+**This guide assumes you already have a Unity project set up for REPOLib modding.\
+If not, follow [Getting Started](./start.md) first.**
+:::
+
+- Right click in your mod folder and choose `Create > REPOLib > Valuable`.
 - Fill in the fields:
-  - `Prefab`: a reference to your prefab.
-  - `Valuable Presets`: the valuable presets to register the valuable to. The vanilla values are:
-    - `Valuables - Generic` (applies to every level)
+  - `Prefab`: A reference to your prefab. Drag and drop your prefab into this field.
+  - `Valuable Presets`: The presets that determine which levels your valuable can spawn in. The vanilla presets are:
+    - `Valuables - Generic` (Always applies to all vanilla levels)
     - `Valuables - Wizard`
     - `Valuables - Manor`
     - `Valuables - Arctic`
+    - `Valuables - Museum`
+
+::: tip Tip for Modded Levels
+There are two options for your Valuable to spawn in Modded Levels:
+1. You include the Modded Level's Preset alongside the other presets you want to use. (**Recommended**)
+
+2. The level Author includes the `Valuables - Generic` preset in their level, and your valuable uses the `Valuables - Generic` preset. (**Not Recommended**)
+:::
 
 ## Creating a Prefab
 
 This quickstart will guide you through creating a custom prefab. We'll be making this Among Us valuable, but the steps are largely the same for most valuables:
 
 ![Screenshot](/repolib/sdk/valuables/9.png)
-
-This guide assumes you have a Unity project set up for REPOLib modding. If not, follow [Getting Started](./start.md) first.
 
 ---
 
@@ -45,9 +56,16 @@ Next, we have to set up the colliders. A valuable consists of one or more `Valua
 
 ![Screnshot](/repolib/sdk/valuables/3.png)
 
-The collider shape (and type of `Phys Grab Object Collider`) may vary, for example `Box` or `Capsule`. For this valuable, we'll keep it simple with only a few box colliders.
+The collider shape (and `Phys Grab Object Collider` type) may vary, such as `Box` or `Capsule`. For this valuable, we will keep it simple and use box colliders.
 
-Let's delete three of the colliders, so we only have one box left. Then, we resize it to fit the body our Among Us:
+::: warning
+Ensure your model game object does not have a `Mesh Collider` component. If it does, remove it to avoid the following error:\
+`[Error  : Unity Log] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.`
+
+**DO NOT** tick the `Convex` checkbox to fix this, even if internet search results suggest it.
+:::
+
+Delete three of the colliders so only one box remains. Then, resize it to fit the body of the Among Us character:
 
 ![Screenshot](/repolib/sdk/valuables/4.png)
 
@@ -84,6 +102,10 @@ After that, you should see this button in the inspector:
 Click it to automatically align the purple bounds to your colliders.
 
 **That's it!** Now that you've got a prefab, follow the steps [at the top of this page](#creating-valuables-with-repolib-sdk) to register the valuable with REPOLib.
+
+::: tip
+For adding custom functionality to your valuable, such as the `Time Glass` changing Players Voice Pitch, check out the [Custom Scripts Guide](./custom-scripts.md).
+:::
 
 ## Credits
 

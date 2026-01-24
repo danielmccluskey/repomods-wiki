@@ -1,14 +1,16 @@
 # Getting Started with REPOLib (C#)
 
-This page assumes you have a C# project setup for R.E.P.O. modding. If not, first follow the guide in [Developing Mods](../../develop.md).
-
+::: info NOTE
+This page assumes you have a C# project setup for R.E.P.O. modding.\
+If not, first follow the guide in [Developing Mods](../../develop.md).
+:::
 ## Installation
 
 Reference [REPOLib](https://www.nuget.org/packages/Zehs.REPOLib) in your project's `.csproj` file:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Zehs.REPOLib" Version="2.*" />
+  <PackageReference Include="Zehs.REPOLib" Version="3.*" />
 </ItemGroup>
 ```
 
@@ -26,3 +28,5 @@ public class YourMod : BaseUnityPlugin
     // ...
 }
 ```
+
+You are now ready to start coding!

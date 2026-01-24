@@ -1,5 +1,9 @@
 # REPOLib Chat Commands
 
+::: danger OUTDATED INFORMATION
+This page is currently outdated! It'll be updated as soon as possible! 
+:::
+
 ## Built-in Commands
 
 ::: info

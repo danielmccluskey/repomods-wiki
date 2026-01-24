@@ -1,6 +1,13 @@
 # REPOLib Bundle Loading
 
-REPOLib loads bundles under the `BepInEx/plugins` folder that have the `.repobundle` extension. These bundles are then scanned for `Mod` and `Content` assets, which allows codeless registration of features in tandem with [REPOLib-Sdk](https://github.com/ZehsTeam/REPOLib-Sdk).
+REPOLib loads bundles under the `BepInEx/plugins` folder that have the `.repobundle` extension automatically and are being scanned for `Mod` and `Content` assets,\
+which allows for codeless registration of features in tandem with [REPOLib-Sdk](https://github.com/ZehsTeam/REPOLib-Sdk).
+
+::: info NOTE
+If your bundle uses the `.repobundle` extension but does not include a `Mod` or `Content` asset,\
+**it will fail to load.** You can still load your bundle manually by removing the `.repobundle` extension\
+and using the Public `BundleLoader` methods, as stated below. For specific examples, look at the corresponding guide pages.
+:::
 
 Bundles are loaded asynchronously, which enables other mods to do their initialization while files are being read from disk, which in turn leads to shorter startup times. Hence, using this system is the preferred way to use this library, even if you're already writing your own plugin code.
 
