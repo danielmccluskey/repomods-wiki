@@ -9,12 +9,100 @@ This Page is currently Work in Progress!
 If not, follow [Getting Started](./start.md) first.**
 :::
 
-- Create a `Level` by right clicking and going to `Create > Level > Level Preset`.
   - The patcher outputs vanilla levels to `Assets/REPO/Game/ScriptableObjects/Level` and their assets to `Assets/REPO/Game/Resources/level`.
 - On the `Level` asset, make sure that the `Valuable Presets` list is empty.
   - This will make generic valuables spawn in your level. If you'd like specific valuables to also spawn, see [Proxy Valuable Presets](#proxy-Valuable-Presets).
-- Right click in your mod folder (or any subfolder) and choose `Create > REPOLib > Level`.
-- Fill in the fields.
+
+## Creating a Level object
+
+- Right click in your mod folder and choose `Create > Level > Level Preset` to create a `Level` object. The default name for this will be `Level - _____`. Replace the underscores in the `Level` object with your `Resource` name.
+- Fill in the fields:
+  - `Resource Path`: A unique name for your level that you'll name all your files after.
+  - `Narrative Name`: The actual name that will show up in game and to the players.
+  - For this example level, we'll be using:
+     - `Resource Path`: Example
+     - `Narrative Name`: Example Level
+  - `Loading Graphics 01`: The building sprite that the truck crashes in to on the level loading screen.
+  - `Loading Graphics 02`: The background sprite for terrain like trees/mountains.
+  - `Loading Graphics 03`: The farground sprite for further terrain and the horizon/moon/sun.
+  - `Valuable Presets`: The valuables you want to appear in your level, see [Proxy Valuable Presets](#proxy-Valuable-Presets).
+  - `Music Preset`: The "music" that can play randomly during the level. For now, let's use a placeholder vanilla one. `Level Music - Arctic (Level Music)`.
+  - `Ambience Presets`: The ambient noises that play randomly during the level. For now, let's use a placeholder vanilla one. `Level Ambience - Global (Level Ambience)`.
+
+
+## Creating a Level Content object
+
+- Right click in your mod folder and choose `Create > REPOLib > Level` to create a `Level Content` object.
+Rename this to your `Narrative Name`.
+- Fill in the fields:
+  - `Level`: Drag your `Level` object into this entry. (`Level - Example`)
+  - `Connect Object`: The [door](#doors) prefab that always spawns between connected modules. (Optional)
+  - `Block Object`: The prefab that always spawns between unconnected modules. (Optional)
+
+
+## Modules
+
+- There are 5 kinds of modules (rooms):
+  - `Start Room`: Module containing the truck that the players spawn in and the first extraction. These do not have a difficulty level and always spawn exactly 1.
+  - `Normal`: Most common modules that contain [Switches](#Switches), and can be connected to on all 4 sides. Has 3 difficulty levels.
+  - `Passage`: Always has two entrances. Has 3 difficulty levels.
+  - `Dead End`: Rarest module that has a chance to spawn connected to any of the other above modules. Has 3 difficulty levels.
+  - `Extraction`: Required modules that contain the extraction point. Has 3 difficulty levels.
+
+- Module Size:
+  - The maximum size a vanilla module can be is 3x3. The coordinates being `-7.5, 7.5` (x,z)
+  - Using this, we know the doorways will always spawn at these coordinates:
+  
+| Normal Modules |   X   |   Y   |   Z   |
+| -------------- | :---: | :---: | :---: |
+| Top            |   0   |   0   |  7.5  |
+| Right          |  7.5  |   0   |   0   |
+| Bottom         |   0   |   x   | -7.5  |
+| Left           | -7.5  |   0   |   0   |
+
+| Module Type  |   X   |   Y   |   Z   |
+| ------------ | :---: | :---: | :---: |
+| Starter Room |   0   |   0   |   0   |
+| Dead End     |   0   |   0   | -7.5  |
+| Extraction   |   0   |   x   | -7.5  |
+| Passage TOP  |   0   |   0   |  7.5  |
+| Passage BOT  |   0   |   0   | -7.5  |
+
+
+## Module Prop Switches
+
+- Module Prop Switches are only used in `Normal` modules and are required. These are what are used to change how a room looks depending on if that side is connected to another module or not.
+
+## Level Path Points
+
+- `Level Points` need to be on the [navmesh](#navmesh).
+- Connected path points need to be correctly connected and referenced to one another on both objects. For example, if `TOP` has a connected point `Middle`. The `Middle` path point should have a connected point to `TOP`.
+- To assign path points, click and drag the desired point in to the `Connected Points` field on a `Level Point` object.
+- There are two kinds of `Level Points` which are used for enemy navigation. A straight line is drawn from all connected path points and there should be no objects obsctructing that path.
+    - `External`: These are marked as `Module Connect` objects and are required on every module type with the exception of Extraction Modules. External path points should NOT be connected to each other, only to `Internal` path points. External path points should be placed near/on these coordinates. 
+
+| External Path Points |   X   |   Y   |   Z   |
+| -------------------- | :---: | :---: | :---: |
+| Top                  |   0   |   0   |   5   |
+| Right                |   5   |   0   |   0   |
+| Bottom               |   0   |   x   |  -5   |
+| Left                 |  -5   |   0   |   0   |
+
+   - `Internal`: These are optional path points that are not marked as `Module Connect` objects and are used for adding extra navigation within a module, like going around a corner or up stairs.
+
+
+## DirtFinder
+
+- DirtFinder is the object used to display the map in-game.
+
+
+## Navmesh
+
+
+## Room Volume
+
+## Doors
+
 
 ## Proxy Valuable Presets
 
