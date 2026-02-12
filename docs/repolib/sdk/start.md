@@ -2,6 +2,12 @@
 
 The Unity workflow is used to create content for REPOLib without writing code.
 
+::: info NOTE
+This page assumes you have the correct Unity Editor setup for R.E.P.O. SDK modding.\
+If not, first follow the guide in [Developing Mods](../../develop.md#setup-the-unity-editor).
+:::
+
+
 ## Unity Project Setup
 
 1. In Unity at the Menubar go to `Window` then `Package Manager`.

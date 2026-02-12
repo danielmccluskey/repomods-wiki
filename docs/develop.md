@@ -7,9 +7,13 @@ How to develop mods.
 The following tools should be installed:
 - **.NET SDK**: Version 6.0 or higher.
 - **Integrated Development Environment (IDE)**: [Visual Studio 2022](https://visualstudio.microsoft.com/) or [JetBrains Rider](https://www.jetbrains.com/rider/).
-- **Git**: Highly recommended for version control.
 - **BepInEx**: The mod loader. This either should be installed with the game directly, or there should be a dedicated development profile in a mod manager.
 
+## Setup the Unity Editor
+> This is only needed for creating Enemies, Valuables and Items!
+
+- **Unity Hub:** Download & Install [Unity Hub](https://unity.com/download).
+- **Unity Editor:** Install the Unity Editor version [2022.3.62f3](unityhub://2022.3.62f3/96770f904ca7).
 
 # Creating a Plugin Project
 
