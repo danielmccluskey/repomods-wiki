@@ -51,6 +51,7 @@ Rename this to your `Narrative Name`.
 
 - Module Size:
   - The maximum size a vanilla module can be is 3x3. The coordinates being `-7.5, 7.5` (x,z)
+  - Anything going over our module size will have a chance to cause overlap in neighboring modules with the exception of `Start Rooms` that can be as large as you'd like.
   - Using this, we know the doorways will always spawn at these coordinates:
   
 | Normal Modules |   X   |   Y   |   Z   |
@@ -72,10 +73,13 @@ Rename this to your `Narrative Name`.
 ## Module Prop Switches
 
 - Module Prop Switches are only used in `Normal` modules and are required. These are what are used to change how a room looks depending on if that side is connected to another module or not.
+- Typically we have 4 parents for each side of a module. Each parent should have the `Module Prop Switch` script where you can drag in your `Connected` and `Not Connected` parents respectively and the connection side.
+![Screenshot](../../public/repolib/sdk/levels/ModulePropSwitch.png)
 
 ## Level Path Points
 
-- `Level Points` need to be on the [navmesh](#navmesh).
+- `Level Points` need to be on the [navmesh](#navmesh) and are used by enemies as wander points and general navigation.
+- `Level Points` should not be in extraction modules.
 - Connected path points need to be correctly connected and referenced to one another on both objects. For example, if `TOP` has a connected point `Middle`. The `Middle` path point should have a connected point to `TOP`.
 - To assign path points, click and drag the desired point in to the `Connected Points` field on a `Level Point` object.
 - There are two kinds of `Level Points` which are used for enemy navigation. A straight line is drawn from all connected path points and there should be no objects obsctructing that path.
@@ -93,15 +97,46 @@ Rename this to your `Narrative Name`.
 
 ## DirtFinder
 
-- DirtFinder is the object used to display the map in-game.
+- DirtFinder is the object used to display the map in-game. There are 3 kinds of DirtFinder we use for maps.
+  - `Wall`: The dark green lines that outline the floor on the minimap.
+  - `Floor`: The lighter green shapes that display the floor on the minimap.
+  - `Door`: The white lines on the minimap.
+- Each `DirtFinder` type has a subset of different shapes to properly display your physical level to the minimap.
+![Screenshot](../../public/repolib/sdk/levels/DirtFinderTypes.png)
+- You can get a better visual aid by assigning your `DirtFinder` object with a `Mesh Filter` and `Mesh Renderer` with the appropriate mesh. Make sure to disable this afterwards or else it will show up in-game.
 
 
 ## Navmesh
 
+- Navmesh is used by the enemies to pathfind between modules.
+- `NavMeshModifier` is typically assigned to the parent of your floors/walls which applies the modification to all the colliders in the children.
+- In editor, the `NavMesh` will show up as a blue highlight showcasing where enemies are able to have proper navigation on.
+- `NavMeshModifiers` have 3 different area types.
+  - `Walkable`: Allows navigation on all nested colliders.
+  - `Not Walkable`: Overwrites collider navigation and removes walkability.
+  - `Jump`: Forces enemies to pathfind by jumping over selected colliders.
+![Screenshot](../../public/repolib/sdk/levels/NavMeshModifier.png)
+- Typically we want to assign, `Walkable` to all our floors and `Not Walkable` to all our walls and any props.
+
 
 ## Room Volume
 
+- `Room Volume` is used for sound logic, as well as displaying the undiscovered rooms on the mini-map.
+- `Room Volume` objects should include a `Box Collider` and the `RoomVolume` script as well as be assigned to the, `RoomVolume` layer at the top.
+- `Room Volumes` can overlap on each other and should cover the entire walkable area, but should not extend outside of the module size.
+![Screenshot](../../public/repolib/sdk/levels/RoomVolume.png)
+![Screenshot](../../public/repolib/sdk/levels/RoomVolumeExample.png)
+
+
 ## Doors
+
+- Doors are optional prefabs we can use to connect between modules.
+- They should be centered on `0, 0` in their prefab.
+- For our example, we can copy the, `Manor Door` prefab and reference it to make our own doors.
+- To make sure our door fits in our doorways, we want to make sure the `PhysGrabObject` `Collider` is slightly smaller around the edges than the actual door mesh.
+- Make sure the collider also has the, `Phys Grab Object` tag and is under the `PhysGrabObjectHinge` layer.
+Our collider should also have the, `PhysGrabObject` material assigned.
+![Screenshot](../../public/repolib/sdk/levels/Door.png)
 
 
 ## Proxy Valuable Presets
