@@ -74,7 +74,7 @@ Rename this to your `Narrative Name`.
 
 - Module Prop Switches are only used in `Normal` modules and are required. These are what are used to change how a room looks depending on if that side is connected to another module or not.
 - Typically we have 4 parents for each side of a module. Each parent should have the `Module Prop Switch` script where you can drag in your `Connected` and `Not Connected` parents respectively and the connection side.
-![Screenshot](../../public/repolib/sdk/levels/ModulePropSwitch.png)
+![Screenshot](/repolib/sdk/levels/ModulePropSwitch.png)
 
 ## Level Path Points
 
@@ -102,7 +102,7 @@ Rename this to your `Narrative Name`.
   - `Floor`: The lighter green shapes that display the floor on the minimap.
   - `Door`: The white lines on the minimap.
 - Each `DirtFinder` type has a subset of different shapes to properly display your physical level to the minimap.
-![Screenshot](../../public/repolib/sdk/levels/DirtFinderTypes.png)
+![Screenshot](/repolib/sdk/levels/DirtFinderTypes.png)
 - You can get a better visual aid by assigning your `DirtFinder` object with a `Mesh Filter` and `Mesh Renderer` with the appropriate mesh. Make sure to disable this afterwards or else it will show up in-game.
 
 
@@ -115,7 +115,7 @@ Rename this to your `Narrative Name`.
   - `Walkable`: Allows navigation on all nested colliders.
   - `Not Walkable`: Overwrites collider navigation and removes walkability.
   - `Jump`: Forces enemies to pathfind by jumping over selected colliders.
-![Screenshot](../../public/repolib/sdk/levels/NavMeshModifier.png)
+![Screenshot](/repolib/sdk/levels/NavMeshModifier.png)
 - Typically we want to assign, `Walkable` to all our floors and `Not Walkable` to all our walls and any props.
 
 
@@ -124,8 +124,8 @@ Rename this to your `Narrative Name`.
 - `Room Volume` is used for sound logic, as well as displaying the undiscovered rooms on the mini-map.
 - `Room Volume` objects should include a `Box Collider` and the `RoomVolume` script as well as be assigned to the, `RoomVolume` layer at the top.
 - `Room Volumes` can overlap on each other and should cover the entire walkable area, but should not extend outside of the module size.
-![Screenshot](../../public/repolib/sdk/levels/RoomVolume.png)
-![Screenshot](../../public/repolib/sdk/levels/RoomVolumeExample.png)
+![Screenshot](/repolib/sdk/levels/RoomVolume.png)
+![Screenshot](/repolib/sdk/levels/RoomVolumeExample.png)
 
 
 ## Doors
@@ -136,7 +136,7 @@ Rename this to your `Narrative Name`.
 - To make sure our door fits in our doorways, we want to make sure the `PhysGrabObject` `Collider` is slightly smaller around the edges than the actual door mesh.
 - Make sure the collider also has the, `Phys Grab Object` tag and is under the `PhysGrabObjectHinge` layer.
 Our collider should also have the, `PhysGrabObject` material assigned.
-![Screenshot](../../public/repolib/sdk/levels/Door.png)
+![Screenshot](/repolib/sdk/levels/Door.png)
 
 
 ## Proxy Valuable Presets
