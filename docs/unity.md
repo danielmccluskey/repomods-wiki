@@ -3,10 +3,10 @@
 A guide for setting up your Unity Project to create mods for R.E.P.O.
 
 This Unity workflow streamlines custom content creation.\
-By combining the **REPOLib-Sdk** Unity Editor package with the core **REPOLib** DLL, you can build mods entirely without writing code.
+By combining the **[REPOLib-Sdk](/repolib/sdk/start.md)** Unity Editor package with the core **[REPOLib](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)** DLL, you can build mods entirely without writing code.
 
-While REPOLib isn't strictly mandatory, it is *highly* recommended, **especially** if you are new to the R.E.P.O. modding scene.\
-For experienced developers, REPOLib is fully extensible, meaning you can still seamlessly integrate your own custom C# scripts alongside it.
+While **REPOLib** isn't strictly mandatory, it is *highly* recommended, **especially** if you are new to the R.E.P.O. modding scene.\
+For experienced developers, **REPOLib** is fully extensible, meaning you can still seamlessly integrate your own custom C# scripts alongside it.
 
 ::: info NOTE
 The Unity workflow is primarly needed for creating Enemies, Levels, Valuables and Items!
@@ -56,20 +56,18 @@ The Unity workflow is primarly needed for creating Enemies, Levels, Valuables an
 2. You will now see new options in the **Inspector** panel. Leave all the pre-filled fields as they are and only add the games folder path.
     
     ![Screenshot](/unity/4.png)
-    ![Screenshot](/unity/5.png)
-    ![Screenshot](/unity/6.png)
 
 3. Next, return to the Unity menu bar and click on **`Tools > Unity Project Patcher > Open Window`**.
     
+    ![Screenshot](/unity/5.png)
+
+4. In the newly opened **`UPPatcher - RepoWrapper`** window, click on **`Enable BepInEx`** at the Bottom of the window and wait for the process to finish.
+    
+    ![Screenshot](/unity/6.png)
+
+5. Once enableing BepInEx is complete, click on **`Run Patcher`** at the Top of the window to begin patching the project.
+    
     ![Screenshot](/unity/7.png)
-
-4. In the newly opened **`UPPatcher - RepoWrapper`** window, click on **`Enable BepInEx`** and wait for the process to finish.
-    
-    ![Screenshot](/unity/8.png)
-
-5. Once complete, click on **`Run Patcher`** to begin patching the project.
-    
-    ![Screenshot](/unity/9.png)
     
 ::: info NOTE
 **This process WILL take a while and will restart the `Unity Editor` about 4-6 times.\
@@ -78,7 +76,7 @@ At the very beginning, you will receive `4` Popups. You can safely click `OK` on
 
 6. After the Editor restarts for the final time, a confirmation window will appear indicating the project has been successfully patched. Click **`OK`**.
     
-    ![Screenshot](/unity/10.png)
+    ![Screenshot](/unity/8.png)
 
 ::: warning Troubleshooting
 If you do not see this window, the patching process has failed. Check the Unity Console for more information.

@@ -1,6 +1,6 @@
 # R.E.P.O. HarmonyX Project Setup
 
-How to develop BepInEx HarmonyX based mods for R.E.P.O.
+A guide for setting up your HarmonyX Project to create mods for R.E.P.O.
 
 ## Setup the Development Environment
 
