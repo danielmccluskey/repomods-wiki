@@ -29,23 +29,23 @@ The Unity workflow is primarly needed for creating Enemies, Levels, Valuables an
 2. In Unity at the Menubar go to **`Window > Package Manager`**.
 3. Click the **`+`** button in the top left and choose **`Add package from git URL`**.
     ![Screenshot](/unity/1.png)
-4. Paste all of the following Unity Packages one after another here:
+4. Paste all of the **following** Unity Package links one after another here:
     ![Screenshot](/unity/2.png)
 
-  - **Unity Project Patcher:** Generates a Unity project from a game build so the game can be played in the editor.
-    ```bash
-    https://github.com/nomnomab/unity-project-patcher.git
-    ```
+    - **Unity Project Patcher:** Generates a Unity project from a game build so the game can be played in the editor.
+        ```bash
+        https://github.com/nomnomab/unity-project-patcher.git
+        ```
 
-  - **Unity Project Patcher BepInEx:** BepInEx handler for a Unity Project Patcher project.
-    ```bash
-    https://github.com/Kesomannen/unity-project-patcher-bepinex.git
-    ```
+    - **Unity Project Patcher BepInEx:** BepInEx handler for a Unity Project Patcher project.
+        ```bash
+        https://github.com/Kesomannen/unity-project-patcher-bepinex.git
+        ```
 
-  - **Unity Repo Project Patcher:** Game wrapper that generates a Unity project from R.E.P.O. build for in-editor play.
-    ```bash
-    https://github.com/ZehsTeam/unity-repo-project-patcher.git
-    ```
+    - **Unity Repo Project Patcher:** Game wrapper that generates a Unity project from R.E.P.O. build for in-editor play.
+        ```bash
+        https://github.com/ZehsTeam/unity-repo-project-patcher.git
+        ```
 
 ### Patching the Project
 

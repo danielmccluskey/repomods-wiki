@@ -9,6 +9,8 @@ If not, first follow the guide in [Unity Project Setup](../../unity.md).
 
 1. In the Unity menu bar, go to **`Window > Package Manager`**.
 2. Click the **`+`** button in the top-left corner and choose **`Add package from git URL`**.
+  ![Screenshot](/unity/1.png)
+
 	- **REPOLib-Sdk:** Editor tools that streamline REPOLib content creation and export.
 	  ```bash
 	  https://github.com/ZehsTeam/REPOLib-Sdk.git
