@@ -31,7 +31,7 @@ Start **R.E.P.O.** through the mod manager to load your mods and enjoy the game.
 
 ## Having Issues While Playing?
 Are you getting stuck on the loading screen, experiencing random disconnects, or crashes while playing modded?\
-Head to the [`#support`](https://discord.com/channels/1344557689979670578/1347085657864015872) channel in our [Discord Community Server](https://discord.gg/vPJtKhYAFe) for help.
+Head to the [`#mod-support`](https://discord.com/channels/1344557689979670578/1347085657864015872) channel in our [Discord Community Server](https://discord.gg/vPJtKhYAFe) for help.
 
 ## Developing Mods for R.E.P.O.
 

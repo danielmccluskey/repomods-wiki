@@ -4,15 +4,29 @@ A guide for setting up your HarmonyX Project to create mods for R.E.P.O.
 
 ## Setup the Development Environment
 
-The following tools should be installed:
-- **.NET SDK**: Version 6.0 or higher, [.Net SDK Download Page](https://dotnet.microsoft.com/en-us/download/dotnet/).
-- **Integrated Development Environment (IDE)**: [Visual Studio](https://visualstudio.microsoft.com/), [Visual Studio Code](https://code.visualstudio.com/) or [JetBrains Rider](https://www.jetbrains.com/rider/).
-- **Git**: Highly recommended for version control, [Git Download](https://git-scm.com/downloads/win).
-- **BepInEx**: The mod loader. This either should be installed with the game directly, or there should be a dedicated development profile in a mod manager.
+To begin development, ensure the following core tools are installed on your system:
+
+**.NET SDK**: Version 6.0 or higher is required. [Download .NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/)
+
+### Integrated Development Environment (IDE)
+While any C# compatible editor works, we recommend the following:
+
+| IDE (Download Link) | Description |
+| :--- | :--- |
+| **[JetBrains Rider](https://www.jetbrains.com/rider/)** | A powerful cross-platform .NET IDE. |
+| **[VSCodium](https://vscodium.com/#install)** | Open-source, telemetry-free binaries of VS Code. |
+| **[Visual Studio](https://visualstudio.microsoft.com/)** | The standard Windows-based IDE for .NET. |
+| **[Visual Studio Code](https://code.visualstudio.com/)** | Lightweight, extensible code editor. |
+
+### Version Control & Modding Tools
+**Git**: Highly recommended for version control, managing project history and collaborating with others, [Git Download Page](https://git-scm.com/install/).
+
+**BepInEx:** The primary mod loader.
+   * **Note:** Should automatically be managed via a dedicated development profile in your preferred mod manager (e.g., Gale, r2modman).
 
 ## Creating a Plugin Project
 
-This tutorial walks through the process of developing a BepInEx mod for R.E.P.O. using [Repo Modding SDKs and Templates](https://github.com/linkoid/Repo.Sdks#readme). This streamlines mod development by automating game detection, using best practices, and simplifying the build process.
+This tutorial walks through the process of developing a BepInEx mod for R.E.P.O. using [REPO Modding SDKs and Templates](https://github.com/linkoid/Repo.Sdks#readme). This streamlines mod development by automating game detection, using best practices, and simplifying the build process.
 
 ::: info **Why Use the Repo SDKs?**
 - **Auto-Detection**: Automatically identifies the game installation directory.
@@ -143,7 +157,7 @@ Alternatively, edit your `.csproj` file and add the following:
 	<PropertyGroup>
 		<RestoreAdditionalProjectSources>
          https://api.nuget.org/v3/index.json; <!-- Official NuGet feed -->
-			https://nuget.bepinex.dev/v3/index.json; <!-- BepInEx NuGet feed -->
+		 https://nuget.bepinex.dev/v3/index.json; <!-- BepInEx NuGet feed -->
 		</RestoreAdditionalProjectSources>
 	</PropertyGroup>
 ```
@@ -189,7 +203,7 @@ In the console, navigate to the project or solution directory and run:
 ```shell
 dotnet build
 ```
-This command compiles the mod and generates a `.dll` file located in `bin/Debug/netstandard2.0/`.
+This command compiles the mod and generates a `.dll` file located in `bin/Debug/netstandard2.1/`.
 
 ### 2. Install the Mod
 
@@ -205,5 +219,5 @@ With the mod installed, launch R.E.P.O. in one of the following methods:
  - via the mod manager
 
 
-# More Resources
+## More Resources
 For additional resources it is highly recomended to read the [BepInEx Plugin Documentation](https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/2_plugin_start.html)
