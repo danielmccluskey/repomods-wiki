@@ -50,7 +50,7 @@ export default defineConfig({
       },
       {
         text: "REPOLib",
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: "Overview", link: "/repolib/overview.md" },
           {
@@ -84,7 +84,7 @@ export default defineConfig({
       },
       {
         text: "Thunderstore",
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: "Overview", link: "/thunderstore/overview.md" },
           { text: "Publish your Mod", link: "/thunderstore/publish.md" },
