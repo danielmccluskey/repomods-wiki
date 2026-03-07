@@ -82,6 +82,14 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "Thunderstore",
+        collapsed: false,
+        items: [
+          { text: "Overview", link: "/thunderstore/overview.md" },
+          { text: "Publish your Mod", link: "/thunderstore/publish.md" },
+        ],
+      },
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/danielmccluskey/repomods-wiki" },
