@@ -42,10 +42,10 @@ export default defineConfig({
         text: "Get Started",
         collapsed: false,
         items: [
-          { text: "Overview", link: "/overview" },
-          { text: "Developing Mods", link: "/develop" },
-          { text: "HarmonyX Project Setup", link: "/harmonyx" },
-          { text: "Unity Project Setup", link: "/unity" },
+          { text: "Overview", link: "/overview.md" },
+          { text: "Developing Mods", link: "/develop.md" },
+          { text: "HarmonyX Project Setup", link: "/harmonyx.md" },
+          { text: "Unity Project Setup", link: "/unity.md" },
         ],
       },
       {
