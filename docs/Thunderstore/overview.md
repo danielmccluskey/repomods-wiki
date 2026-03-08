@@ -7,7 +7,7 @@ The R.E.P.O. modding community has centralized its mod hosting and distribution 
 * Sync identical mod setups with friends via profile codes.
 * Automatically resolve technical dependencies.
 
-### Quick Guide: Creating a TEAM on Thunderstore
+### Creating a TEAM on Thunderstore
 If you want to publish your own R.E.P.O. mods, Thunderstore requires you to create a **"Team,"** which acts as your permanent developer namespace for publishing mods.
 
 #### How to set it up:
