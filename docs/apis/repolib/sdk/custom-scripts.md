@@ -2,7 +2,7 @@
 
 Unfortunately, custom scripts cannot be developed from inside the Unity editor. Instead, you have to write your scripts elsewhere:
 
-- Create a new C# project for R.E.P.O. modding (see [Developing Mods](../../develop.md)).
+- Create a new HarmonyX project for R.E.P.O. modding (see [HarmonyX Project Setup](../../../harmonyx.md)).
 - Add `REPOLib` as a dependency to the project (see [Getting Started in the API section](../api/start.md)).
 - Write your scripts in that project.
 - Build the project and copy the output DLL into your Unity project.

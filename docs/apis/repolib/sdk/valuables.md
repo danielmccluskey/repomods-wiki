@@ -1,7 +1,7 @@
 # Creating Valuables with REPOLib-Sdk
 
 ::: info NOTE
-**This guide assumes you already have a Unity project set up for REPOLib modding.\
+**This guide assumes you have a REPOLib Unity project set up for REPOLib modding.\
 If not, follow [Getting Started](./start.md) first.**
 :::
 

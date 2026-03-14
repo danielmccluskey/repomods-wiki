@@ -1,53 +1,39 @@
 # Getting Started with REPOLib (Unity)
 
-The Unity workflow is used to create content for REPOLib without writing code.
-
 ::: info NOTE
-This page assumes you have the correct Unity Editor setup for R.E.P.O. SDK modding.\
-If not, first follow the guide in [Developing Mods](../../develop.md#setup-the-unity-editor).
+This page assumes you have a Unity project setup for R.E.P.O. modding.\
+If not, first follow the guide in [Unity Project Setup](../../../unity.md).
 :::
 
+### Adding REPOLib to the Project
 
-## Unity Project Setup
+1. In the Unity menu bar, go to **`Window > Package Manager`**.
+2. Click the **`+`** button in the top-left corner and choose **`Add package from git URL`**.
+  ![Screenshot](/unity/1.png)
 
-1. In Unity at the Menubar go to `Window` then `Package Manager`.
-2. Click the `+` button in the top left and choose `Add package from git URL`.
-  ![Screenshot](/repolib/sdk/start/0.png)
-3. Paste all of the following Unity Packages one after another here:
-  ![Screenshot](/repolib/sdk/start/1.png)
-
-  - **Unity Project Patcher:** Generates a Unity project from a game build so the game can be played in the editor.
-    ```bash
-    https://github.com/nomnomab/unity-project-patcher.git
-    ```
-
-  - **Unity Project Patcher BepInEx:** BepInEx handler for a Unity Project Patcher project.
-    ```bash
-    https://github.com/Kesomannen/unity-project-patcher-bepinex.git
-    ```
-
-  - **Unity Repo Project Patcher:** Game wrapper that generates a Unity project from R.E.P.O. build for in-editor play.
-    ```bash
-    https://github.com/ZehsTeam/unity-repo-project-patcher.git
-    ```
-
-  - **REPOLib-Sdk:** Editor tools that streamline REPOLib content creation and export.
-    ```bash
-    https://github.com/ZehsTeam/REPOLib-Sdk.git
-    ```
+	- **REPOLib-Sdk:** Editor tools that streamline REPOLib content creation and export.
+	  ```bash
+	  https://github.com/ZehsTeam/REPOLib-Sdk.git
+	  ```
 
 ::: tip
-To update REPOLib-Sdk open Package Manager, select the REPOLib-Sdk package, then choose Update.
+To update the **REPOLib-Sdk**, open the Package Manager, select the `REPOLib-Sdk` package in the list, and click **Update**.
 :::
 
-### Add REPOLib to the project
+After the REPOLib-Sdk package finishes installing, you need to add the missing REPOLib `.dll` to your project:
 
-1. Download **[REPOLib.dll](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)** from Thunderstore
-2. Extract the downloaded archive.
-3. Copy the file named REPOLib.dll into any location under your project's `Assets` folder.
+3. Download **[REPOLib.dll](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)** from Thunderstore.
+4. Extract the downloaded archive.
+5. Copy or drag-and-drop the `REPOLib.dll` file into any location within your project's `Assets` folder.
+	
+	![Screenshot](/repolib/sdk/start/0.png)
+
+6. To verify the installation, right-click inside the Project window. You should see a new sub-menu option: **`Create > REPOLib`**.
+	
+	![Screenshot](/repolib/sdk/start/1.png)
 
 ::: tip
-To update REPOLib, replace the dll with a newer version's.
+To update **REPOLib** in the future, simply replace the existing `.dll` file with the newer version.
 :::
 
 ## Working with Mods and Content

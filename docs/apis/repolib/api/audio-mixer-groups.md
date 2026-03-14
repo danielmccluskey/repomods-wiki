@@ -1,5 +1,10 @@
 # Fixing Audio Mixer Groups with REPOLib
 
+::: info NOTE
+This page assumes you have a Harmony project setup for R.E.P.O. modding.\
+If not, first follow the guide in [Harmony Project Setup](../../../harmonyx.md).
+:::
+
 Matches audio mixer groups from bundled assets with the real runtime equivalents.
 
 Fixing audio mixer groups on a prefab and its children:

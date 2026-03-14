@@ -1,9 +1,10 @@
 # Getting Started with REPOLib (C#)
 
 ::: info NOTE
-This page assumes you have a C# project setup for R.E.P.O. modding.\
-If not, first follow the guide in [Developing Mods](../../develop.md).
+This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
+If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
 :::
+
 ## Installation
 
 Reference [REPOLib](https://www.nuget.org/packages/Zehs.REPOLib) in your project's `.csproj` file:
@@ -29,4 +30,4 @@ public class YourMod : BaseUnityPlugin
 }
 ```
 
-You are now ready to start coding!
+You are now ready to start coding using REPOLib!

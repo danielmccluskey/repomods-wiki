@@ -1,5 +1,10 @@
 # Registering Valuables with REPOLib
 
+::: info NOTE
+This page assumes you have a Harmony project setup for R.E.P.O. modding.\
+If not, first follow the guide in [Harmony Project Setup](../../../harmonyx.md).
+:::
+
 Registering a valuable:
 
 ```c#
