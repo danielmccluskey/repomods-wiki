@@ -3,7 +3,7 @@
 A guide for setting up your Unity Project to create mods for R.E.P.O.
 
 This Unity workflow streamlines custom content creation.\
-By combining the **[REPOLib-Sdk](/repolib/sdk/start.md)** Unity Editor package with the core **[REPOLib](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)** DLL, you can build mods entirely without writing code.
+By combining the **[REPOLib-Sdk](/apis/repolib/sdk/start.md)** Unity Editor package with the core **[REPOLib](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)** DLL, you can build mods entirely without writing code.
 
 While **REPOLib** isn't strictly mandatory, it is *highly* recommended, **especially** if you are new to the R.E.P.O. modding scene.\
 For experienced developers, **REPOLib** is fully extensible, meaning you can still seamlessly integrate your own custom C# scripts alongside it.
@@ -82,4 +82,4 @@ At the very beginning, you will receive `4` Popups. You can safely click `OK` on
 If you do not see this window, the patching process has failed. Check the Unity Console for more information.
 :::
 
-Now that you Unity Project is successfully patched, we recommend adding [the REPOLib-Sdk](./repolib/sdk/start.md) to your project workflow to make the Workflow easier.
+Now that you Unity Project is successfully patched, we recommend adding the [REPOLib-Sdk](./apis/repolib/sdk/start.md) to your project workflow to make the Workflow easier.

@@ -2,7 +2,7 @@
 
 ::: info NOTE
 This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
-If not, first follow the guide in [HarmonyX Project Setup](../../harmonyx.md).
+If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
 :::
 
 ## Installation

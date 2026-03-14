@@ -1,6 +1,6 @@
 # Publishing to Thunderstore
 
-Once you have exported your mod (either via the [Unity Workflow](../repolib/sdk/start.md#export-a-mod) and/or manually for HarmonyX projects), you are ready to share it with the community.
+Once you have exported your mod (either via the [Unity Workflow](../apis/repolib/sdk/start.md#export-a-mod) and/or manually for HarmonyX projects), you are ready to share it with the community.
 
 ### 1. Prepare your Package
 Thunderstore requires a `.zip` file containing at least these three files at the root:

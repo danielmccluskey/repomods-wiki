@@ -13,10 +13,10 @@ While any C# compatible editor works, we recommend the following:
 
 | IDE (Download Link) | Description |
 | :--- | :--- |
-| **[JetBrains Rider](https://www.jetbrains.com/rider/)** | A powerful cross-platform .NET IDE. |
-| **[VSCodium](https://vscodium.com/#install)** | Open-source, telemetry-free binaries of VS Code. |
-| **[Visual Studio](https://visualstudio.microsoft.com/)** | The standard Windows-based IDE for .NET. |
-| **[Visual Studio Code](https://code.visualstudio.com/)** | Lightweight, extensible code editor. |
+| **[JetBrains Rider](https://www.jetbrains.com/rider/)** | Feature-rich, cross-platform .NET IDE. |
+| **[VSCodium](https://vscodium.com/#install)** | A Community-driven, Privacy focused VS Code fork without telemetry. |
+| **[Visual Studio](https://visualstudio.microsoft.com/)** | The standard, feature-rich Windows .NET IDE |
+| **[Visual Studio Code](https://code.visualstudio.com/)** | Highly customizable, plugin-based editor supporting diverse languages. |
 
 ### Version Control & Modding Tools
 **Git**: Highly recommended for version control, managing project history and collaborating with others, [Git Download Page](https://git-scm.com/install/).

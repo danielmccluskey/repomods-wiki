@@ -2,7 +2,7 @@
 
 ::: info NOTE
 This page assumes you have a Unity project setup for R.E.P.O. modding.\
-If not, first follow the guide in [Unity Project Setup](../../unity.md).
+If not, first follow the guide in [Unity Project Setup](../../../unity.md).
 :::
 
 ### Adding REPOLib to the Project
