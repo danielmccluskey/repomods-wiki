@@ -16,7 +16,8 @@ The Unity workflow is primarly needed for creating Enemies, Levels, Valuables an
 
 - **Unity Hub:** Download & Install [Unity Hub](https://unity.com/download).
 - **Unity Editor:** Install the Unity Editor version [2022.3.62f3](unityhub://2022.3.62f3/96770f904ca7).
-- **.NET SDK**: Version 6.0 or higher. This is required for AssetRipper to Run. 
+- **.NET SDK:** Version 6.0 or higher. This is required for AssetRipper to Run. 
+- **Git:** Download & Install [Git](https://git-scm.com/downloads). This is required for installing packages via Git URL in Unity.
 <!-- NOTE: AssetRipper may be updated with a more Recent build which will Require .Net SDK 10 in the Future -->
 
 ## Unity Project Setup
