@@ -100,8 +100,8 @@ export default defineConfig({
 	  {
 		text: "Thunderstore",
 		items: [
-		  { text: "Overview", link: "./overview.md" },
-		  { text: "Publish your Mod", link: "./publish.md" },
+		  { text: "Overview", link: "thunderstore/overview.md" },
+		  { text: "Publish your Mod", link: "/thunderstore/publish.md" },
 		],
 	  },
 	],
