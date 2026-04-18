@@ -1,33 +1,37 @@
 # Debug Commands
 
-Chat command can either be executed in the chat or chat and debug console depending on how you register your chat command.
+::: info NOTE
+This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
+If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
+:::
 
-### Chat
+The Debug console is a vanilla feature added in `v0.3.0`\
+Debug commands can be executed in the debug console, chat, or both depending on how you register your command.
 
-Typing a chat command in the chat requires you to start with a `/`
+### Chat Commands
+
+Typing a chat command in chat requires you to start with a `/`
 
 ### Debug Console
 
-The debug console is a new vanilla addition added in `v0.3.0`
-
 ::: info
-You must enable `Developer Mode` in the config settings and restart the Game to enable access to the debug console.\
-Debug console commands can be executed at any time, even in the main menu and lobby menu.
+You must enable `Developer Mode` in the **REPOLib** config settings and restart the game to access the debug console.\
+Debug console commands can be executed at any time, including in the main menu and lobby menu.
 :::
 
-Typing a chat command in the debug console doesn't require you to start with a `/`
-
-Open the debug console by pressing the tilde (**~**) key. For non-US layouts, this is typically the key located directly below **ESC** and to the left of the **1** key.
+Open the debug console by pressing the tilde (**`~`**) key. For non-US keyboard layouts, this is typically the key directly below **ESC** and to the left of **1**.
 
 ::: tip Tips:
-- You can scroll up and down with the up/down arrow keys or scroll wheel. Also when an option is selected you can press tab to complete it.
-- You can use middle mouse click to redo the previous command you executed.
-- Items & valuables spawn at the closest level point whilst enemies spawn in a room nearby.
+- Typing a command in the debug console does not require a `/`.
+- You can scroll through previous entries with the up/down arrow keys or the scroll wheel.
+- When a suggestion is selected, press **TAB** to auto-complete it.
+- You can use middle mouse click to repeat the previous command.
+- Items and valuables spawn at the nearest level point, while enemies spawn in a nearby room.
 :::
 
 ## Registering Debug Commands
 
-Registering a chat command:
+Registering a debug command:
 
 ```c#
 using BepInEx;
@@ -62,8 +66,8 @@ public static class MyCommand
             Execute,
 
             // This argument is optional.
-            // This will provide additional command argument suggestions as the user types.
-            // The user must type the entire command name and a space before suggestions start showing.
+            // This provides additional command argument suggestions as the user types.
+            // The user must type the full command name and a space before suggestions appear.
             Suggest,
 
             // This argument is optional and true by default.
@@ -78,24 +82,24 @@ public static class MyCommand
         REPOLib.Modules.Commands.RegisterCommand(cmd);
     }
 
-    // isDebugConsole will be true if the command is being executed for the debug console.
-    // args are additional options you can add to your command execution.
+    // isDebugConsole will be true if the command is executed from the debug console.
+    // args are additional options passed to your command.
     private static void Execute(bool isDebugConsole, string[] args)
     {
-        // You should call this function if your command executes successfully.
+        // Call this function if your command executes successfully.
         DebugCommandHandler.instance?.CommandSuccessEffect();
 
-        // You should call this function if your command execution fails.
+        // Call this function if your command execution fails.
         DebugCommandHandler.instance?.CommandFailedEffect();
     }
 
-    // The Suggest function will only be executed if your are typing your command in the debug console.
-    // You must write your command name and a space for the suggest function to start executing.
-    // Every characater you add or remove will execute the Suggest function.
+    // The Suggest function only runs while typing in the debug console.
+    // You must type the command name and a space first.
+    // Every character added or removed runs the Suggest function again.
 
-    // isDebugConsole will be true if the command is being executed from the debug console.
+    // isDebugConsole will be true if the command is executed from the debug console.
     // partial is the latest argument string from args.
-    // args is the total list of arguments.
+    // args is the full list of arguments.
     private static List<string> Suggest(bool isDebugConsole, string partial, string[] args)
     {
         // Return a list of possible arguments based on the current partial and args.
@@ -104,7 +108,7 @@ public static class MyCommand
 
     private static bool IsEnabled()
     {
-        // Add logic here if you want to have your command be conditionally enabled.
+        // Add logic here if you want your command to be conditionally enabled.
 
         // Disables your command in the main menu.
         if (SemiFunc.IsSplashScreen() || SemiFunc.IsMainMenu())
@@ -133,4 +137,3 @@ public static class MyCommand
         return true;
     }
 }
-```

@@ -1,8 +1,8 @@
 # Creating Network Events with REPOLib
 
 ::: info NOTE
-This page assumes you have a Harmony project setup for R.E.P.O. modding.\
-If not, first follow the guide in [Harmony Project Setup](../../../harmonyx.md).
+This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
+If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
 :::
 
 Creating a networked event:

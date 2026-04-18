@@ -1,8 +1,8 @@
 # REPOLib Bundle Loading
 
 ::: info NOTE
-This page assumes you have a Harmony project setup for R.E.P.O. modding.\
-If not, first follow the guide in [Harmony Project Setup](../../../harmonyx.md).
+This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
+If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
 :::
 
 REPOLib loads bundles under the `BepInEx/plugins` folder that have the `.repobundle` extension automatically and are being scanned for `Mod` and `Content` assets,\
