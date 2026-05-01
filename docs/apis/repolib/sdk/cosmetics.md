@@ -19,8 +19,7 @@ Create a Unity prefab for your cosmetic. Use vanilla cosmetics as reference if n
    - **Asset Id**: A unique id for this cosmetic. Avoid conflicts with other mods by using a format like `modname:hat1`. Must not start with `index:`.
    - **Asset**: Reference to your Vanilla Cosmetic Asset (Follow steps 1 & 2 from the next section)
    - **Prefab**: Reference to your prefab (Drag & Drop, can be located outside mod folder)
-   - **Prefab Ref**: Reference to your prefab (Drag & Drop, can be located outside mod folder)
-     - To reduce RAM usage, leave the prefab field empty and use this instead then add your prefab to the `Mod` asset under `Extra Bundle Files`.
+   - **Prefab Ref**: Reference to your prefab (Drag & Drop, can be located outside mod folder). Preferred over **Prefab** as it reduces in-game RAM usage. If using this, leave the **Prefab** field empty and add your prefab to the `Mod` asset under `Extra Bundle Files`.
 
 ## 3. Create the Vanilla Cosmetic Asset
 
