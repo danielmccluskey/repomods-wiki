@@ -65,6 +65,7 @@ export default defineConfig({
 				  { text: "Bundle Loading", link: "/apis/repolib/api/bundles.md" },
 				  { text: "Fixing Audio Mixer Groups", link: "/apis/repolib/api/audio-mixer-groups.md" },
 				  { text: "Debug Commands", link: "/apis/repolib/api/commands.md" },
+				  { text: "Cosmetics", link: "/apis/repolib/api/cosmetics.md" },
 				  { text: "Enemies", link: "/apis/repolib/api/enemies.md" },
 				  { text: "Shop Items", link: "/apis/repolib/api/items.md" },
 				  { text: "Network Events", link: "/apis/repolib/api/network-events.md" },
@@ -79,6 +80,7 @@ export default defineConfig({
 				items: [
 				  { text: "Getting Started", link: "/apis/repolib/sdk/start.md" },
 				  { text: "Custom Scripts", link: "/apis/repolib/sdk/custom-scripts.md" },
+				  { text: "Cosmetics", link: "/apis/repolib/sdk/cosmetics.md" },
 				  { text: "Enemies", link: "/apis/repolib/sdk/enemies.md" },
 				  { text: "Levels", link: "/apis/repolib/sdk/levels.md" },
 				  { text: "Shop Items", link: "/apis/repolib/sdk/items.md" },
