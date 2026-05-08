@@ -2,11 +2,11 @@
 
 ### How to Contribute
 
-1. Fork this repository and clone your fork.
+1. Fork this repository and git clone/download your fork.
 
 2. Install [Node v22 or newer](https://nodejs.org/en/download).  
    It is recommended to use `Chocolatey` on Windows and `nvm` on macOS/Linux.  
-   You will also need a package manager such as `npm`.
+   we're using the `npm` package manager in this quick guide.
 
 3. After installing Node and a package manager of choice, install the dependencies:
 
