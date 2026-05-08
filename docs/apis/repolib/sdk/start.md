@@ -28,7 +28,9 @@ After the REPOLib-Sdk package finishes installing, you need to add the missing R
 	
 	![Screenshot](/repolib/sdk/start/0.png)
 
-6. To verify the installation, right-click inside the Project window. You should see a new sub-menu option: **`Create > REPOLib`**.
+6. Left-click the `REPOLib.dll` in the project window and uncheck `Validate References` in the inspector.
+
+7. To verify the installation, right-click inside the Project window. You should see a new sub-menu option: **`Create > REPOLib`**.
 	
 	![Screenshot](/repolib/sdk/start/1.png)
 
