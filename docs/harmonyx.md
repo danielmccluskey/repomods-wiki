@@ -6,7 +6,7 @@ A guide for setting up your HarmonyX Project to create mods for R.E.P.O.
 
 To begin development, ensure the following core tools are installed on your system:
 
-**.NET SDK**: Version 6.0 or higher is required. [Download .NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/)
+**.NET SDK:** [Version 9.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
 
 ### Integrated Development Environment (IDE)
 While any C# compatible editor works, we recommend the following:

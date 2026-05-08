@@ -9,7 +9,7 @@ If not, follow [Getting Started](./start.md) first.**
 
 ## 1. Create an Item Prefab
 Create a Unity prefab for your item. Use vanilla items as reference if needed.
-- **Vanilla Item Location**: `Assets/REPO/Game/Resources/items/items` you can simple copy a prefab to your mod folder.
+- **Vanilla Item Location**: `Assets/REPO/Game/Resources/items` you can simple copy a prefab to your mod folder.
 
 ## 2. Create an Item (Content) Asset
 1. Right-click in your mod folder (or subfolder)
@@ -35,12 +35,14 @@ Create a Unity prefab for your item. Use vanilla items as reference if needed.
 | Type | Purpose |
 |------|---------|
 | `Drone` | For drones |
+| `Launcher` | For Staffs |
 | `Orb` | For orbs |
 | `Grenade` | For grenades |
 | `Mine` | For mines |
 | `Melee` | For melee weapons |
 | `Gun` | For guns |
 | `Tracker` | For trackers |
+| `Vehicle`| For vehicles |
 | `Tool` | For tools (e.g. Phase Brigde) |
 | `Item_upgrade` | For player upgrades |
 | `Player_upgrade` | Unused ItemType/Unknown |
