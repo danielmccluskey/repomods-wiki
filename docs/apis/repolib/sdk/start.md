@@ -5,10 +5,6 @@ This page assumes you have a Unity project setup for R.E.P.O. modding.\
 If not, first follow the guide in [Unity Project Setup](../../../unity.md).
 :::
 
-::: warning
-If you have errors for missing references to Assembly-CSharp-firstpass.dll, select `REPOLib.dll` in the project window then uncheck `Validate References` in the inspector.
-:::
-
 ### Adding REPOLib to the Project
 
 1. In the Unity menu bar, go to **`Window > Package Manager`**.
@@ -34,6 +30,12 @@ After the REPOLib-Sdk package finishes installing, you need to add the missing R
 6. To verify the installation, right-click inside the Project window. You should see a new sub-menu option: **`Create > REPOLib`**.
 
    ![Screenshot](/repolib/sdk/start/1.png)
+
+::: warning
+If you have errors for missing references to Assembly-CSharp-firstpass.dll, select `REPOLib.dll` in the project window, then uncheck `Validate References` in the inspector:
+
+![Screenshot](/repolib/sdk/start/2.png)
+:::
 
 ::: tip
 To update **REPOLib** in the future, simply replace the existing `.dll` file with the newer version.
