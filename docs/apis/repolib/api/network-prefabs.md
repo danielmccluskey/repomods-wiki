@@ -7,7 +7,7 @@ If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md)
 
 Registering a network prefab:
 
-```c#
+```C#
 private void Awake()
 {
     REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle =>

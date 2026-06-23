@@ -7,7 +7,7 @@ If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md)
 
 Registering a valuable:
 
-```c#
+```C#
 private void Awake()
 {
     REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle => 
@@ -20,19 +20,19 @@ private void Awake()
 
 Registering a valuable to a specific level:
 
-```c#
+```C#
 private void Awake()
 {
     REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle => 
     {
         var prefab = assetBundle.LoadAsset<GameObject>("your_valuable_prefab");
 
-        // Vanilla Valuables Presets:
-        // "Valuables - Generic"
-        // "Valuables - Wizard"
-        // "Valuables - Manor"
-        // "Valuables - Arctic"
-        // "Valuables - Museum"
+        // Vanilla Valuable Presets:
+        // - "Valuables - Generic"
+        // - "Valuables - Wizard"
+        // - "Valuables - Manor"
+        // - "Valuables - Arctic"
+        // - "Valuables - Museum"
 
         var presets = new List<string> { "Valuables - Wizard" };
         REPOLib.Modules.Valuables.RegisterValuable(prefab, presets);
@@ -40,11 +40,11 @@ private void Awake()
 }
 ```
 
-The Preset `Valuables - Generic` Applies to every Vanilla Level.
+The `Valuables - Generic` preset applies to every Vanilla Level.
 
-::: tip Tip for Modded Levels
-There are two options for your Valuable to spawn in Modded Levels:
-1. You include the Modded Level's Preset alongside the other presets you want to use. (**Recommended**)
-
-2. The level Author includes the `Valuables - Generic` preset in their level, and your valuable uses the `Valuables - Generic` preset. (**Not Recommended**)
+<!-- BLOKBUSTR TODO: "Recommended" and "Not Recommended" terminology feels insufficient and inexact. -->
+::: tip MODDED LEVELS
+There are two options for your valuable to spawn in modded levels:
+1. You include the modded level's preset alongside the other presets you want to use. (**Recommended**)
+2. The level author includes the `Valuables - Generic` preset in their level, and your valuable uses the `Valuables - Generic` preset. (**Not Recommended**)
 :::

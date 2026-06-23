@@ -116,7 +116,7 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
      <PropertyGroup>
        <GameDirectory>C:\Path\To\REPO\</GameDirectory>
        <ProfileName>Default</ProfileName>
-       <BepInExDirectory>$(AppData)\Roaming\r2modmanPlus-local\REPO\profiles\$(ProfileName)\BepInEx</BepInExDirectory>
+       <BepInExDirectory>$(AppData)\r2modmanPlus-local\REPO\profiles\$(ProfileName)\BepInEx</BepInExDirectory>
        <StartArguments>--doorstop-enable true --doorstop-target "$(BepInExDirectory)\core\BepInEx.Preloader.dll"</StartArguments>
      </PropertyGroup>
    </Project>
@@ -126,7 +126,7 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
      <PropertyGroup>
        <GameDirectory>C:\Path\To\REPO\</GameDirectory>
        <ProfileName>Default</ProfileName>
-       <BepInExDirectory>$(AppData)\Roaming\com.kesomannen.gale\repo\profiles\$(ProfileName)\BepInEx</BepInExDirectory>
+       <BepInExDirectory>$(AppData)\com.kesomannen.gale\repo\profiles\$(ProfileName)\BepInEx</BepInExDirectory>
        <StartArguments>--doorstop-enable true --doorstop-target "$(BepInExDirectory)\core\BepInEx.Preloader.dll" --gale-profile "$(ProfileName)"</StartArguments>
      </PropertyGroup>
    </Project>

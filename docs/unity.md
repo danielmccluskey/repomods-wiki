@@ -1,7 +1,7 @@
 # R.E.P.O. Unity Project Setup
 
 A guide for setting up your Unity Project to create mods for R.E.P.O.\
-The Unity workflow is primarily needed for creating Valuables, Shop Items, Enemies and Levels.
+The Unity workflow is primarily needed for creating Valuables, Shop Items, Enemies, Levels and Cosmetics.
 
 By combining the **[REPOLib-Sdk](/apis/repolib/sdk/start.md)** Unity Editor package with the core **[REPOLib](https://thunderstore.io/c/repo/p/Zehs/REPOLib)** DLL, you can build mods entirely without writing code. However, without any coding knowledge, you will be limited on what you can do.
 

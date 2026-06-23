@@ -1,7 +1,6 @@
 # Overview of REPOLib
 
 REPOLib is a widely used library for adding content to R.E.P.O.
-
 - [Thunderstore](https://thunderstore.io/c/repo/p/Zehs/REPOLib/)
 - [GitHub Repository](https://github.com/ZehsTeam/REPOLib)
 
