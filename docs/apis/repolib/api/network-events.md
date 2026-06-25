@@ -39,7 +39,6 @@ public class YourMod : BaseUnityPlugin
 
 **Calling** a networked event:
 
-<!-- BLOKBUSTR: TODO: I don't think RaiseOthers would work in Singleplayer -->
 ```C#
 // The data you are sending through your networked event.
 string message = "Hello World!";

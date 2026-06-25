@@ -1,21 +1,20 @@
 # Thunderstore Overview
 
-### What is Thunderstore?
-The R.E.P.O. modding community has centralized its mod hosting and distribution entirely on **Thunderstore.io**. The community chose Thunderstore because it seamlessly integrates with Mod Managers like the Thunderstore App, Gale Mod Manager and r2modman, allowing players to:
+## What is Thunderstore?
+The R.E.P.O. modding community has centralized its mod hosting and distribution entirely on [Thunderstore](https://thunderstore.io/c/repo). The community chose Thunderstore because it seamlessly integrates with mod managers like the Thunderstore App, Gale Mod Manager and r2modman, allowing players to:
+- Easily install mods.
+- Sync identical mod setups with friends via profile codes.
+- Automatically resolve technical dependencies.
 
-* Easily install mods.
-* Sync identical mod setups with friends via profile codes.
-* Automatically resolve technical dependencies.
-
-### Creating a Team on Thunderstore
+## Creating a Team on Thunderstore
 If you want to publish your own R.E.P.O. mods, Thunderstore requires you to create a **"Team,"** which acts as your permanent developer namespace for publishing mods.
 
-#### How to set it up:
-1.  Go to [thunderstore.io](https://thunderstore.io) and click **"Login with..."** at the top right to log in using a **GitHub, Discord or Overwolf** account.
-2.  Click on your **profile name** at the top right of the window to open your account settings.
-3.  Navigate to the **"Teams"** tab.
-4.  Click the **"Create Team"** button.
-5.  Type in your desired team name (using your standard username is recommended unless working with a group).
+### Setting Up a Team:
+1. Go to [Thunderstore.io](https://thunderstore.io) and click **"Log In"** at the top right. You can connect with an existing **Discord**, **GitHub** or **Overwolf** account.
+2. Click on your **profile** at the top right of the page, and click **"Teams"**.
+3. Click the **"Create Team"** button at the left-hand side of the page.
+4. Type in your desired team name (using your standard username is recommended unless working with a group).
 
-> [!CAUTION]
-> **CRITICAL WARNING:** Once you upload a mod under a specific Team, your Thunderstore team cannot be deleted or renamed, so choose your name wisely!
+::: danger WARNING
+Once you upload a mod under a specific Team, your Thunderstore team **cannot be deleted or renamed**, so choose your name wisely!
+:::
