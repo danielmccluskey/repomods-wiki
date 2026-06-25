@@ -1,4 +1,4 @@
-# Creating Valuables with REPOLib-Sdk
+# Creating Valuables with REPOLib SDK
 
 ::: info NOTE
 **This guide assumes you have a REPOLib Unity project set up for REPOLib modding.\
@@ -15,11 +15,10 @@ If not, follow [Getting Started](./start.md) first.**
     - `Valuables - Arctic`
     - `Valuables - Museum`
 
-::: tip Tip for Modded Levels
-There are two options for your Valuable to spawn in Modded Levels:
-1. You include the Modded Level's Preset alongside the other presets you want to use. (**Recommended**)
-
-2. The level Author includes the `Valuables - Generic` preset in their level, and your valuable uses the `Valuables - Generic` preset. (**Not Recommended**)
+::: tip MODDED LEVELS
+There are two options for your valuable to spawn in modded levels:
+1. You include the modded level's preset alongside the other presets you want to use. (**Recommended**)
+2. The level author includes the `Valuables - Generic` preset in their level, and your valuable uses the `Valuables - Generic` preset. (**Not Recommended**)
 :::
 
 ## Creating a Prefab
@@ -36,7 +35,7 @@ We'll choose the `Valuable Trophy` prefab (under `03 medium`) as it's an appropi
 
 ![Screenshot](/repolib/sdk/valuables/0.png)
 
-Next, we add our model to the prefab. This model can be downloaded [here](https://skfb.ly/6VEEJ) if you want to follow along.
+Next, we'll add our model to the prefab. This model can be downloaded [here](https://skfb.ly/6VEEJ) if you want to follow along, or you can use your own model.
 
 ![Screenshot](/repolib/sdk/valuables/1.png)
 
@@ -46,7 +45,7 @@ When creating or browsing for a model, keep in mind the vertex count. Models wit
 This example model is slightly too detailed and probably shouldn't be released.
 :::
 
-Make sure the model is a child of the `Object` game object, as seen in the screenshot.
+Make sure the model is a child of the `Object` GameObject, as seen in the screenshot.
 
 From here, we can center our model and safely delete the old one (called `Mesh`):
 
@@ -56,11 +55,11 @@ Next, we have to set up the colliders. A valuable consists of one or more `Valua
 
 ![Screnshot](/repolib/sdk/valuables/3.png)
 
-The collider shape (and `Phys Grab Object Collider` type) may vary, such as `Box` or `Capsule`. For this valuable, we will keep it simple and use box colliders.
+The collider shape (and `Phys Grab Object Collider` type) may vary, such as `Box`, `Sphere` or `Capsule`. For this valuable, we will keep it simple and use `Box` colliders.
 
 ::: warning
-Ensure your model game object does not have a `Mesh Collider` component. If it does, remove it to avoid the following error:\
-`[Error  : Unity Log] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.`
+Ensure your model GameObject does **not** have a `Mesh Collider` component. If it does, remove it to avoid the following error:\
+`[Error : Unity Log] Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported since Unity 5.`
 
 **DO NOT** tick the `Convex` checkbox to fix this, even if internet search results suggest it.
 :::
@@ -69,25 +68,25 @@ Delete three of the colliders so only one box remains. Then, resize it to fit th
 
 ![Screenshot](/repolib/sdk/valuables/4.png)
 
-Continue with the backpack and visor:
+Duplicate the GameObject and continue with the backpack and visor:
 
 ![Screenshot](/repolib/sdk/valuables/5.png)
 
 ::: tip
-To duplicate a game object, select it and hit `Ctrl + D`.
+To duplicate a GameObject, select it and press `Ctrl` + `D`.
 :::
 
 With our model and colliders set up, we can configure the `Valuable Object` component at the prefab's root:
 
 ![Screenshot](/repolib/sdk/valuables/6.png)
 
-- `Durability Preset`: how easily the valuable loses value and breaks.
-- `Value Preset`: how much the valuable is worth, between a min and max.
-- `Phys Attribute Preset`: the mass (weight) of the object.
-- `Audio Preset`: contains the valuable's sound effects for colliding and breaking.
-- `Audio Preset Pitch`: shifts the pitch of the sound effects.
-- `Particle Colors`: the colors of the particles that are created when the object collides. A larger color ratio means particles of that color are more common.
-- `Volume Type`: the size category of the object.
+- `Durability Preset`: How easily the valuable loses value and breaks.
+- `Value Preset`: How much the valuable is worth, between a min and max.
+- `Phys Attribute Preset`: The mass (weight) of the object.
+- `Audio Preset`: Contains the valuable's sound effects for colliding and breaking.
+- `Audio Preset Pitch`: Shifts the pitch of the sound effects.
+- `Particle Colors`: The colors of the particles that are created when the object collides. A larger color ratio means particles of that color are more common.
+- `Volume Type`: The size category of the object.
 
 Here are some reasonable values for our Among Us valuable:
 
@@ -104,9 +103,9 @@ Click it to automatically align the purple bounds to your colliders.
 **That's it!** Now that you've got a prefab, follow the steps [at the top of this page](#creating-valuables-with-repolib-sdk) to register the valuable with REPOLib.
 
 ::: tip
-For adding custom functionality to your valuable, such as the `Time Glass` changing Players Voice Pitch, check out the [Custom Scripts Guide](./custom-scripts.md).
+For adding custom functionality to your valuable, such as the `Time Glass` changing players' voice pitch, check out the [Custom Scripts Guide](./custom-scripts.md).
 :::
 
 ## Credits
 
-"Among Us Astronaut - Clay" (https://skfb.ly/6VEEJ) by MatMADNESS is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+["Among Us Astronaut - Clay"](https://skfb.ly/6VEEJ) by MatMADNESS is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).

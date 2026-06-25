@@ -11,6 +11,8 @@ If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md)
 using ExitGames.Client.Photon;
 using REPOLib.Modules;
 
+[BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
+[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
 public class YourMod : BaseUnityPlugin
 {
     public static NetworkedEvent ExampleEvent;
@@ -42,12 +44,12 @@ public class YourMod : BaseUnityPlugin
 // The data you are sending through your networked event.
 string message = "Hello World!";
 
-// Call networked event on everyone (this works in singleplayer).
+// Call networked event on everyone (this works in Singleplayer).
 ExampleEvent.RaiseEvent(message, REPOLib.Modules.NetworkingEvents.RaiseAll, SendOptions.SendReliable);
 
-// Call networked event on everyone but yourself (this does nothing in singleplayer).
+// Call networked event on everyone but yourself (this does nothing in Singleplayer).
 ExampleEvent.RaiseEvent(message, REPOLib.Modules.NetworkingEvents.RaiseOthers, SendOptions.SendReliable);
 
-// Call networked event on the master client (this works in singleplayer).
+// Call networked event on the master client (this works in Singleplayer).
 ExampleEvent.RaiseEvent(message, REPOLib.Modules.NetworkingEvents.RaiseMasterClient, SendOptions.SendReliable);
 ```

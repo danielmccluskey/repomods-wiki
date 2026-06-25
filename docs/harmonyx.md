@@ -94,19 +94,18 @@ While the SDK typically auto-detects the game installation, it is possible to ma
 The SDK will use the first `Directory.Repo.props` file found at or above the project directory. **Think of this file as a configuration for this specific device.** The same file (without copying) can be used for all projects in descendant folders.
 
 1. **Create the File**:\
-   Place a `Directory.Repo.props` file in either the home directory, the folder containg all the mods, or the root of the mod project.
+   Place a `Directory.Repo.props` file in either the home directory, the folder containg all the mods, or the root of the mod project.\
+   Here's an example file hierarchy:
 
-   Here is an example folder hierarchy:
-
-   - 📁 My Projects
-      - 📁 My REPO Projects
-         - 📄 **Directory.Repo.Props**
-         - 📁 MyFirstProject
-            - 📄 MyFirstProject.sln
-            - 📁 MyFirstProject
-               - 📄 MyFirstProject.csproj
-         - 📁 MyFutureProject01
-         - 📁 MyFutureProject02
+   - :file_folder: `My Projects`
+      - :file_folder: `My REPO Projects`
+         - :page_facing_up: **`Directory.Repo.Props`**
+         - :file_folder: `MyFirstProject`
+            - :page_facing_up: `MyFirstProject.sln`
+            - :file_folder: `MyFirstProject`
+               - :page_facing_up: `MyFirstProject.csproj`
+         - :file_folder: `MyFutureProject01`
+         - :file_folder: `MyFutureProject02`
 
 2. **Add the Following XML Configuration**:
    > These file paths are Windows-specific.

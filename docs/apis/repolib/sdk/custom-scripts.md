@@ -1,6 +1,6 @@
-# Using Custom Scripts with REPOLib-Sdk
+# Using Custom Scripts with REPOLib SDK
 
-Unfortunately, custom scripts cannot be developed from inside the Unity editor. Instead, you have to write your scripts elsewhere:
+Unfortunately, custom scripts cannot be developed from within the Unity editor. Instead, you have to write your scripts elsewhere:
 
 - Create a new HarmonyX project for R.E.P.O. modding (see [HarmonyX Project Setup](../../../harmonyx.md)).
 - Add `REPOLib` as a dependency to the project (see [Getting Started in the API section](../api/start.md)).

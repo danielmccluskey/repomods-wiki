@@ -37,11 +37,11 @@ Parts of this guide differ between **Windows** and **Linux**. Make sure to insta
 
    ![Screenshot](/unity/1.png)
 
-4. Paste all the **following** Unity Package links one after another in this text field:
+4. Paste all the **following** Unity Package links one after another into this text field:
 
    ![Screenshot](/unity/2.png)
 
-   - **Unity Project Patcher:** Generates a Unity project from a game build so the game can be played in the editor.
+   - **Unity Project Patcher**: Generates a Unity project from a game build so the game can be played in the editor.
    ::: code-group
    ```bash [Windows]
    https://github.com/nomnomab/unity-project-patcher.git
@@ -51,7 +51,7 @@ Parts of this guide differ between **Windows** and **Linux**. Make sure to insta
    ```
    :::
 
-   - **Unity Project Patcher BepInEx:** BepInEx handler for a Unity Project Patcher project.
+   - **Unity Project Patcher BepInEx**: BepInEx handler for a Unity Project Patcher project.
    ::: code-group
    ```bash [Windows]
    https://github.com/Kesomannen/unity-project-patcher-bepinex.git
@@ -61,7 +61,7 @@ Parts of this guide differ between **Windows** and **Linux**. Make sure to insta
    ```
    :::
 
-   - **Unity REPO Project Patcher:** Game wrapper that generates the Unity project from a R.E.P.O. build for in-editor play.
+   - **Unity REPO Project Patcher**: Game wrapper that generates the Unity project from a R.E.P.O. build for in-editor play.
    ::: code-group
    ```bash [Windows]
    https://github.com/ZehsTeam/unity-repo-project-patcher.git

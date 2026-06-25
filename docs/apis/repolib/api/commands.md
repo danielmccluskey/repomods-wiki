@@ -8,7 +8,7 @@ If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md)
 The Debug Console is a vanilla feature that was added in the Monster Update (`v0.3.0`).\
 Debug commands can be executed in the console, chat, or both depending on how you register your command.
 
-<!-- BLOKBUSTR: Add in-game example screenshot? -->
+![Screenshot](/repolib/api/commands/0.png)
 
 ### Chat Commands
 
@@ -16,15 +16,15 @@ Typing a command in chat requires you to prefix the command with a `/`.
 
 ### Debug Console
 
-::: info NOTE
-You must enable `Developer Mode` and `Vanilla Developer Mode` in the **REPOLib** config and restart the game to access the debug console.
-<!-- BLOKBUSTR: Screenshot of config settings? -->
-Debug console commands can be executed at any time, including in the main menu and lobby menu, but the availability of certain commands will vary.
-:::
+Debug console commands can be executed at any time, including in the main menu and lobby menu, but the availability of certain commands will vary. Some commands are not available to clients; only the host.
 
 Open the debug console by pressing the tilde (`~`) key. This is typically the key directly below `Esc` and to the left of `1`.
 
-<!-- BLOKBUSTR: Screenshot pointing to the tilde key? -->
+::: info NOTE
+You must enable `Developer Mode` and `Vanilla Developer Mode` in the **REPOLib** config and restart the game to access the debug console.
+
+Alternatively, you can use [**LobbyImprovements**](https://thunderstore.io/c/repo/p/Dev1A3/LobbyImprovements_REPO) to enable the debug console by enabling its `Debug Console/Enabled` config setting. If your keyboard does not have the `~` key, LobbyImprovements also allows you to rebind the key (with its `Debug Console/Keybind` config).
+:::
 
 ::: tip TIPS
 - Typing a command in the debug console does not require a `/` prefix.
