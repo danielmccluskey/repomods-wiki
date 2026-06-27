@@ -5,45 +5,51 @@ This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
 If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
 :::
 
-The Debug console is a vanilla feature added in `v0.3.0`\
-Debug commands can be executed in the debug console, chat, or both depending on how you register your command.
+The Debug Console is a vanilla feature that was added in the Monster Update (`v0.3.0`).\
+Debug commands can be executed in the console, chat, or both depending on how you register your command.
+
+![Screenshot](/repolib/api/commands/0.png)
 
 ### Chat Commands
 
-Typing a chat command in chat requires you to start with a `/`
+Typing a command in chat requires you to prefix the command with a `/`.
 
 ### Debug Console
 
-::: info
-You must enable `Developer Mode` in the **REPOLib** config settings and restart the game to access the debug console.\
-Debug console commands can be executed at any time, including in the main menu and lobby menu.
+Debug console commands can be executed at any time, including in the main menu and lobby menu, but the availability of certain commands will vary. Some commands are not available to clients; only the host.
+
+Open the debug console by pressing the tilde (`~`) key. This is typically the key directly below `Esc` and to the left of `1`.
+
+::: info NOTE
+You must enable `Developer Mode` and `Vanilla Developer Mode` in the **REPOLib** config and restart the game to access the debug console.
+
+Alternatively, you can use [**LobbyImprovements_REPO**](https://thunderstore.io/c/repo/p/Dev1A3/LobbyImprovements_REPO) to enable the debug console by enabling its `Debug Console/Enabled` config setting. If your keyboard does not have the `~` key, LobbyImprovements_REPO also allows you to rebind the key (with its `Debug Console/Keybind` config).
 :::
 
-Open the debug console by pressing the tilde (**`~`**) key. For non-US keyboard layouts, this is typically the key directly below **ESC** and to the left of **1**.
-
-::: tip Tips:
-- Typing a command in the debug console does not require a `/`.
+::: tip TIPS
+- Typing a command in the debug console does not require a `/` prefix.
 - You can scroll through previous entries with the up/down arrow keys or the scroll wheel.
-- When a suggestion is selected, press **TAB** to auto-complete it.
-- You can use middle mouse click to repeat the previous command.
-- Items and valuables spawn at the nearest level point, while enemies spawn in a nearby room.
+- When a suggestion is selected, press `Tab` to auto-complete it.
+- You can click the middle mouse button to repeat the previous command.
+- Valuables and Items spawn at the nearest Level Point, while Enemies spawn in a nearby room.
 :::
 
 ## Registering Debug Commands
 
 Registering a debug command:
 
-```c#
+<!-- BLOKBUSTR TODO: Add more example functionality like logging the command usage or displaying on-screen feedback. -->
+```C#
 using BepInEx;
 using System.Collections.Generic;
 
 [BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID)]
+[BepInDependency("REPOLib", BepInDependency.DependencyFlags.HardDependency)]
 public class YourMod : BaseUnityPlugin
 {
     private void Awake()
     {
-        // Call your command's register method from your plugin's awake.
+        // Call your command's Register method from your plugin's awake.
         MyCommand.Register();
     }
 }
@@ -62,27 +68,27 @@ public static class MyCommand
             // The description of your command.
             "This is my test command",
 
-            // The execute function of your command.
+            // The Execute method of your command.
             Execute,
 
-            // This argument is optional.
-            // This provides additional command argument suggestions as the user types.
+            // This argument is optional. Set to null to skip it.
+            // This method provides additional command argument suggestions as the user types.
             // The user must type the full command name and a space before suggestions appear.
             Suggest,
 
             // This argument is optional and true by default.
-            // Function to determine if the command should be enabled.
+            // This method determines whether the command should be enabled.
             IsEnabled,
 
             // This argument is optional and true by default.
-            // If true, the command will only be accessible in the debug console.
+            // If true, the command will only be accessible in the debug console and not in chat.
             debugOnly: false
         );
 
         REPOLib.Modules.Commands.RegisterCommand(cmd);
     }
 
-    // isDebugConsole will be true if the command is executed from the debug console.
+    // isDebugConsole will be true if the command is executed from the debug console, and false if executed from chat.
     // args are additional options passed to your command.
     private static void Execute(bool isDebugConsole, string[] args)
     {
@@ -129,7 +135,7 @@ public static class MyCommand
         }
 
         // Disables your command if you are not the host.
-        if (!SemiFunc.IsMasterClientOrSingleplayer())
+        if (SemiFunc.IsNotMasterClient())
         {
             return false;
         }
@@ -137,3 +143,8 @@ public static class MyCommand
         return true;
     }
 }
+```
+
+::: tip
+You can refer to the vanilla `DebugCommandHandler` class to study how its own debug commands are registered (in its `Start` method), and how they function.
+:::

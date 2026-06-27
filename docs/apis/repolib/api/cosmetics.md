@@ -7,7 +7,7 @@ If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md)
 
 Registering a cosmetic:
 
-```c#
+```C#
 using REPOLib.Objects.Sdk;
 
 private void Awake()

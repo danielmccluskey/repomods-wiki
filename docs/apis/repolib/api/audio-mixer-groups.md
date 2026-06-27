@@ -5,11 +5,15 @@ This page assumes you have a HarmonyX project setup for R.E.P.O. modding.\
 If not, first follow the guide in [HarmonyX Project Setup](../../../harmonyx.md).
 :::
 
-Matches audio mixer groups from bundled assets with the real runtime equivalents.
+::: tip
+You rarely need to do this manually, as registering features will automatically fix their prefabs' mixer groups.
+:::
+
+REPOLib matches audio mixer groups from bundled assets with the real runtime equivalents.
 
 Fixing audio mixer groups on a prefab and its children:
 
-```c#
+```C#
 private void Awake()
 {
     REPOLib.BundleLoader.LoadBundle("your_assetbundle_file_path", assetBundle => 
@@ -19,7 +23,3 @@ private void Awake()
     });
 }
 ```
-
-::: tip
-You rarely need to do this manually, as registering features will automatically fix their prefabs' mixer groups.
-:::
