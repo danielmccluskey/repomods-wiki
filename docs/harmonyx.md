@@ -41,7 +41,7 @@ The R.E.P.O. Modding SDKs offer pre-built templates to expedite the setup of a m
 
 1. **Install the Template**:\
    Open a terminal and run this command to install the templates:
-   ```shell
+   ```Shell
    dotnet new install Linkoid.Repo.Plugin.Templates
    ```
    ::: warning Important
@@ -52,7 +52,7 @@ The R.E.P.O. Modding SDKs offer pre-built templates to expedite the setup of a m
    If there are lots of templates, try searching for "C#" or "REPO" to narrow down the results.
 
    The template can also be created from the console with the following command:
-   ```shell
+   ```Shell
    dotnet new repoharmony -n MyRepoMod -A MyName
    ```
    - `-n MyRepoMod`: Specifies the plugin's name.
@@ -61,32 +61,32 @@ The R.E.P.O. Modding SDKs offer pre-built templates to expedite the setup of a m
    This command will generate a BepInEx plugin with HarmonyX patching support.
 
    To see all available options, run:
-   ```shell
+   ```Shell
    dotnet new repoharmony --help
    ```
 
 ### B. Creating a Project from Scratch (Not Using Templates)
 
-A standard C# project without a template can also be used (though not recomended). This section will also describe how to add the R.E.P.O. Modding SDKs to an existing project.
+A standard C# project without a template can also be used (though not recommended). This section will also describe how to add the R.E.P.O. Modding SDKs to an existing project.
 
 1. **Adding the R.E.P.O. Modding SDK to the `.csproj` File**:\
    Add the `Repo.Plugin.Build` SDK by including the following within the `<ItemGroup>` tags:
-   ```xml
+   ```XML
    <PackageReference Include="Linkoid.Repo.Plugin.Build" Version="*" PrivateAssets="all" />
    ```
 2. **Adding Game Assemblies**:\
-   It is recomended to use the R.E.P.O. GameLibs package for referencing game assemblies:
-   ```xml
+   It is recommended to use the R.E.P.O. GameLibs package for referencing game assemblies:
+   ```XML
    <PackageReference Include="R.E.P.O.GameLibs.Steam" Version="*-*" PrivateAssets="all" Publicize="true" />
    ```
    However, it is also possible to reference the game assemblies from the local game installation by adding the following property within the `<PropertyGroup>` tags:
-   ```xml
+   ```XML
    <EnableGameReferences>true</EnableGameReferences>
    ```
 
 ## II. Organization and Configuration
 
-It is recomended to have a folder for all your modding projects to be placed in.
+It is recommended to have a folder for all your modding projects to be placed in.
 
 ### Adding a `Directory.Repo.props` File
 While the SDK typically auto-detects the game installation, it is possible to manually specify the game directory using a `Directory.Repo.props` file. This is also recommended to configure built mods to be automatically deployed to a specific mod manager profile.
@@ -94,7 +94,7 @@ While the SDK typically auto-detects the game installation, it is possible to ma
 The SDK will use the first `Directory.Repo.props` file found at or above the project directory. **Think of this file as a configuration for this specific device.** The same file (without copying) can be used for all projects in descendant folders.
 
 1. **Create the File**:\
-   Place a `Directory.Repo.props` file in either the home directory, the folder containg all the mods, or the root of the mod project.\
+   Place a `Directory.Repo.props` file in either the home directory, the folder containing all the mods, or the root of the mod project.\
    Here's an example file hierarchy:
 
    - :file_folder: `My Projects`
@@ -110,7 +110,7 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
 2. **Add the Following XML Configuration**:
    > These file paths are Windows-specific.
    ::: code-group
-   ```xml [r2modman]
+   ```XML [r2modman]
    <Project>
      <PropertyGroup>
        <GameDirectory>C:\Path\To\REPO\</GameDirectory>
@@ -120,7 +120,7 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
      </PropertyGroup>
    </Project>
    ```
-   ```xml [Gale]
+   ```XML [Gale]
    <Project>
      <PropertyGroup>
        <GameDirectory>C:\Path\To\REPO\</GameDirectory>
@@ -145,12 +145,12 @@ You can add these as either a global or a project-specific NuGet source.
 > This example uses the BepInEx NuGet source.
 - **Global NuGet source**:\
   Run the following command in your terminal:
-  ```cmd
+  ```Shell
   dotnet nuget add source https://nuget.bepinex.dev/v3/index.json -n BepInEx
   ```
 - **Project-specific NuGet source**:\
   Alternatively, edit your `.csproj` file and add the following:
-  ```xml
+  ```XML {4-5}
   <!-- Add Nuget Sources -->
       <PropertyGroup>
           <RestoreAdditionalProjectSources>
@@ -172,14 +172,14 @@ This domain is owned by an official [Thunderstore staff member](https://github.c
 
 You can add a Thunderstore dependency to your `.csproj` like any other NuGet Package:
 > This example uses [Nickklmao's MenuLib](https://thunderstore.io/c/repo/p/nickklmao/MenuLib) mod.
-```xml
+```XML {2}
 <ItemGroup>
   <PackageReference Include="Nickklmao-MenuLib" Version="2.*" />
 </ItemGroup>
 ```
 
 After updating your file, you *may* need to run:
-```cmd
+```Shell
 dotnet restore
 ```
 
@@ -193,7 +193,7 @@ Don't forget to update the (Major-)versions as updates get released for the pack
 
 1. **Build the Mod**:\
    In the console, navigate to the project or solution directory and run:
-   ```shell
+   ```Shell
    dotnet build
    ```
    This command compiles the mod and generates a `.dll` file located in `bin/Debug/netstandard2.1/`.

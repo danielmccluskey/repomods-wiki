@@ -16,12 +16,12 @@ This documentation page is currently a placeholder. Detailed API references and 
 
 1. Ensure you have added the dependency to your `.csproj` as described in the [HarmonyX Project Setup](../../harmonyx.md#adding-thunderstore-dependencies).
 2. Add a `BepInDependency` attribute to your plugin class:
-   ```C#
+   ```C# {5}
    using System;
    using BepInEx;
    
    [BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-   [BepInDependency("nickklmao.menulib")] // [!code focus]
+   [BepInDependency("nickklmao.menulib", BepInDependency.DependencyFlags.HardDependency)]
    private class YourMod : BaseUnityPlugin
    {
        // ...

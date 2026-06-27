@@ -79,7 +79,7 @@ Mods can be exported directly from the Editor, where REPOLib SDK automatically h
    - `Website Url`: Optional. This can link to your mod's source (like GitHub), a Discord channel for discussion/issues, etc.
    - `Dependencies`: A list of dependency strings. `Zehs-REPOLib-X.Y.Z` should always be included (where `X.Y.Z` is the target version).
    - `Icon`: Must be a 256x256 PNG file.
-   - `Readme`: A longer description of the mod in a separate Markdown (`.md`) file, which will be displayed on your mod's frontpage. You can use Thunderstore's [Markdown Preview](https://thunderstore.io/tools/markdown-preview) tool.
+   - `Readme`: A longer description of the mod in a separate Markdown (`.md`) file, which will be displayed on your mod's main page. You can use Thunderstore's [Markdown Preview](https://thunderstore.io/tools/markdown-preview) tool.
    - `Extra Files`: Additional files to include in the package, for example a DLL containing your scripts or a `CHANGELOG.md` file.
    - `Extra Bundle Files`: Additional assets to be included in the mod's `.repobundle`.
 

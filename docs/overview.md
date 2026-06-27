@@ -8,9 +8,9 @@ Enhance your R.E.P.O. experience by installing mods. Follow these steps to get s
 
 1. **Get a Mod Manager**:
    There are currently three Mod Managers for modding R.E.P.O.:
-   - [Gale](https://thunderstore.io/package/Kesomannen/GaleModManager/) (User Friendly UI, Windows & Linux support)
-   - [r2modman](https://thunderstore.io/package/ebkr/r2modman/) (Familiar look to Thundestore Mod Manager, Windows & Linux support)
-   - [Thunderstore Mod Manager](https://www.overwolf.com/app/thunderstore-thunderstore_mod_manager) (Windows Only, Requires Overwolf)
+   - [Gale](https://thunderstore.io/package/Kesomannen/GaleModManager/) (User-friendly UI, Windows & Linux support)
+   - [r2modman](https://thunderstore.io/package/ebkr/r2modman/) (Familiar look to Thunderstore Mod Manager, Windows & Linux support)
+   - [Thunderstore Mod Manager](https://www.overwolf.com/app/thunderstore-thunderstore_mod_manager) (Requires Overwolf, Windows-only)
 
    **We recommend using either Gale or r2modman.**
 

@@ -23,7 +23,7 @@ Open the debug console by pressing the tilde (`~`) key. This is typically the ke
 ::: info NOTE
 You must enable `Developer Mode` and `Vanilla Developer Mode` in the **REPOLib** config and restart the game to access the debug console.
 
-Alternatively, you can use [**LobbyImprovements**](https://thunderstore.io/c/repo/p/Dev1A3/LobbyImprovements_REPO) to enable the debug console by enabling its `Debug Console/Enabled` config setting. If your keyboard does not have the `~` key, LobbyImprovements also allows you to rebind the key (with its `Debug Console/Keybind` config).
+Alternatively, you can use [**LobbyImprovements_REPO**](https://thunderstore.io/c/repo/p/Dev1A3/LobbyImprovements_REPO) to enable the debug console by enabling its `Debug Console/Enabled` config setting. If your keyboard does not have the `~` key, LobbyImprovements_REPO also allows you to rebind the key (with its `Debug Console/Keybind` config).
 :::
 
 ::: tip TIPS
@@ -44,7 +44,7 @@ using BepInEx;
 using System.Collections.Generic;
 
 [BepInPlugin("You.YourMod", "YourMod", "1.0.0")]
-[BepInDependency(REPOLib.MyPluginInfo.PLUGIN_GUID)]
+[BepInDependency("REPOLib", BepInDependency.DependencyFlags.HardDependency)]
 public class YourMod : BaseUnityPlugin
 {
     private void Awake()

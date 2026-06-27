@@ -1,9 +1,9 @@
 # Thunderstore Overview
 
 ## What is Thunderstore?
-The R.E.P.O. modding community has centralized its mod hosting and distribution entirely on [Thunderstore](https://thunderstore.io/c/repo). The community chose Thunderstore because it seamlessly integrates with mod managers like the Thunderstore App, Gale Mod Manager and r2modman, allowing players to:
+The R.E.P.O. modding community has centralized its mod hosting and distribution entirely on [Thunderstore](https://thunderstore.io/c/repo). The community chose Thunderstore because it seamlessly integrates with mod managers like Gale, r2modman and the Thunderstore Mod Manager, allowing players to:
 - Easily install mods.
-- Sync identical mod setups with friends via profile codes.
+- Sync identical mod setups with friends via profile codes or files.
 - Automatically resolve technical dependencies.
 
 ## Creating a Team on Thunderstore
