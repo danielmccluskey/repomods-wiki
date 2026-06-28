@@ -38,7 +38,6 @@ Alternatively, you can use [**LobbyImprovements_REPO**](https://thunderstore.io/
 
 Registering a debug command:
 
-<!-- BLOKBUSTR TODO: Add more example functionality like logging the command usage or displaying on-screen feedback. -->
 ```C#
 using BepInEx;
 using System.Collections.Generic;
@@ -97,6 +96,18 @@ public static class MyCommand
 
         // Call this function if your command execution fails.
         DebugCommandHandler.instance?.CommandFailedEffect();
+        
+        // Display the result of your command in-game.
+        DebugConsoleUI.instance?.SetResponseText(
+            // Rich text tags, such as color, are supported and used in vanilla.
+            "This is a <color=green>Test</color>",
+            
+            // The default color of the response text.
+            Color.white
+        );
+        
+        // Optionally log the usage of your command.
+        YourMod.Logger.LogInfo("Command Used: /test");
     }
 
     // The Suggest function only runs while typing in the debug console.
