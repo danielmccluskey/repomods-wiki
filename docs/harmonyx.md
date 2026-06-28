@@ -108,9 +108,8 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
          - :file_folder: `MyFutureProject02`
 
 2. **Add the Following XML Configuration**:
-   > These file paths are Windows-specific.
-   ::: code-group
-   ```XML [r2modman]
+  ::: code-group
+   ```XML [r2modman (Windows)]
    <Project>
      <PropertyGroup>
        <GameDirectory>C:\Path\To\REPO\</GameDirectory>
@@ -120,13 +119,33 @@ The SDK will use the first `Directory.Repo.props` file found at or above the pro
      </PropertyGroup>
    </Project>
    ```
-   ```XML [Gale]
+   ```XML [r2modman (Linux)]
+   <Project>
+     <PropertyGroup>
+       <GameDirectory>/Path/To/REPO/</GameDirectory>
+       <ProfileName>Default</ProfileName>
+       <BepInExDirectory>$(HOME)/.config/r2modmanPlus-local/REPO/profiles/$(ProfileName)/BepInEx/</BepInExDirectory>
+       <StartArguments>--doorstop-enable true --doorstop-target "$(BepInExDirectory)/core/BepInEx.Preloader.dll"</StartArguments>
+     </PropertyGroup>
+   </Project>
+   ```
+   ```XML [Gale (Windows)]
    <Project>
      <PropertyGroup>
        <GameDirectory>C:\Path\To\REPO\</GameDirectory>
        <ProfileName>Default</ProfileName>
        <BepInExDirectory>$(AppData)\com.kesomannen.gale\repo\profiles\$(ProfileName)\BepInEx</BepInExDirectory>
        <StartArguments>--doorstop-enable true --doorstop-target "$(BepInExDirectory)\core\BepInEx.Preloader.dll" --gale-profile "$(ProfileName)"</StartArguments>
+     </PropertyGroup>
+   </Project>
+   ```
+   ```XML [Gale (Linux)]
+   <Project>
+     <PropertyGroup>
+       <GameDirectory>/Path/To/REPO/</GameDirectory>
+       <ProfileName>Default</ProfileName>
+       <BepInExDirectory>$(HOME)/.local/share/com.kesomannen.gale/repo/profiles/$(ProfileName)/BepInEx</BepInExDirectory>
+       <StartArguments>--doorstop-enable true --doorstop-target "$(BepInExDirectory)/core/BepInEx.Preloader.dll" --gale-profile "$(ProfileName)"</StartArguments>
      </PropertyGroup>
    </Project>
    ```
@@ -164,7 +183,7 @@ You can add these as either a global or a project-specific NuGet source.
 
 ::: info NOTE
 Make sure you have added the Thunderstore NuGet feed to your NuGet Sources or `.csproj` file:
-```
+```HTTP
 https://nuget.windows10ce.com/nuget/v3/index.json
 ```
 This domain is owned by an official [Thunderstore staff member](https://github.com/Windows10CE).
