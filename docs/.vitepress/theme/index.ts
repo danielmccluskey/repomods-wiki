@@ -2,8 +2,9 @@ import { h, watch, onMounted } from "vue";
 import { useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import CustomFooter from "./components/CustomFooter.vue";
-import { initTabSync } from "./tabsync"; 
-import "./style.css"; // This is a typescript error and works without issues
+import { initTabSync } from "./tabsync";
+// @ts-ignore
+import "./style.css";
 
 export default {
   extends: DefaultTheme,
