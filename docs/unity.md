@@ -1,5 +1,4 @@
 # R.E.P.O. Unity Project Setup
-
 A guide for setting up your Unity Project to create mods for R.E.P.O.\
 The Unity workflow is primarily needed for creating Valuables, Shop Items, Enemies, Levels and Cosmetics.
 
@@ -13,101 +12,98 @@ Parts of this guide differ between **Windows** and **Linux**. Make sure to insta
 :::
 
 ## Prerequisites
-
-- **Unity Hub**: Download and install [Unity Hub](https://unity.com/download).
-- **Unity Editor**: Install the Unity Editor version [2022.3.62f3](unityhub://2022.3.62f3/96770f904ca7).
+Download and Install the following:\
+- **[Git](https://git-scm.com/downloads)** This is required for installing packages via Git URL in Unity.
 - **.NET SDK**: Required for AssetRipper to run.
-    <!--NOTE: The AssetRipper Build the Windows version of the UPP Wrapper uses may be updated and will require .NET SDK 10-->
-    - **For Windows**: [Version 9.x](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
-    - **For Linux**: [Version 10.x](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
-- **Git**: Download & Install [Git](https://git-scm.com/downloads). This is required for installing packages via Git URL in Unity.
+   <!--NOTE: The AssetRipper build the Windows version of the UPP Wrapper uses may be updated and will require .NET SDK 10-->
+   - **For Windows**: [Version 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+   - **For Linux**: [Version 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
+- **[Unity Hub](https://unity.com/download)**
+- **[Unity Editor 2022.3.62f3](https://unity.com/releases/editor/whats-new/2022.3.62f3)**
 
 ## Unity Project Setup
+Create a new Unity project with the following configuration (see image below):
+- **Editor Version**: `2022.3.62f3`
+- **Project Location**: Local Project
+- **Template**: 3D (Built-In Render Pipeline)
 
-1. Create a new Unity project with the following configuration (see image below):
-   - **Editor Version**: `2022.3.62f3`
-   - **Project Location**: Local Project
-   - **Template**: 3D (Built-In Render Pipeline)
+![Screenshot](/unity/0.png)
 
-   ![Screenshot](/unity/0.png)
+Once Unity fully opens, navigate to the Menubar and click **`Window > Package Manager`**.\
+Click the **`+`** button at the top left of the **Package Manager** Window and choose\
+**`Add package from git URL...`** and install the required Unity Packages by pasting the following links one by one into the Text field:
 
-2. Once Unity fully opens, navigate to the menu bar and click `Window > Package Manager`.
+![Screenshot](/unity/1.png)
 
-3. Click the `+` button in the top left of the Package Manager and choose `Add package from git URL...`:
+::: warning
+If you had Unity open before installing **git**, it will complain about **git** not being installed. In this case, close Unity Editor and Unity Hub, and make sure they areactually fully closed. If nothing is working, try restarting your PC.
+:::
 
-   ![Screenshot](/unity/1.png)
+**Unity Project Patcher**:
+::: code-group
+```bash [Windows]
+https://github.com/nomnomab/unity-project-patcher.git
+```
+```bash [Linux]
+https://github.com/Jettcodey/unity-project-patcher.git
+```
+:::
 
-4. Paste all the **following** Unity Package links one after another into this text field:
+**Unity Project Patcher BepInEx**:
+::: code-group
+```bash [Windows]
+https://github.com/Kesomannen/unity-project-patcher-bepinex.git
+```
+```bash [Linux]
+https://github.com/Jettcodey/unity-project-patcher-bepinex.git
+```
+:::
 
-   ![Screenshot](/unity/2.png)
+**Unity REPO Project Patcher**:
+::: code-group
+```bash [Windows]
+https://github.com/ZehsTeam/unity-repo-project-patcher.git
+```
+```bash [Linux]
+https://github.com/Jettcodey/unity-repo-project-patcher.git
+```
+:::
 
-   - **Unity Project Patcher**: Generates a Unity project from a game build so the game can be played in the editor.
-   ::: code-group
-   ```bash [Windows]
-   https://github.com/nomnomab/unity-project-patcher.git
-   ```
-   ```bash [Linux]
-   https://github.com/Jettcodey/unity-project-patcher.git
-   ```
-   :::
+Please make sure to only use these git links when setting up the R.E.P.O. Unity Project Patcher!
 
-   - **Unity Project Patcher BepInEx**: BepInEx handler for a Unity Project Patcher project.
-   ::: code-group
-   ```bash [Windows]
-   https://github.com/Kesomannen/unity-project-patcher-bepinex.git
-   ```
-   ```bash [Linux]
-   https://github.com/Jettcodey/unity-project-patcher-bepinex.git
-   ```
-   :::
+## Run the Project Patcher
+Navigate to the Menubar and click **`Tools > Unity Project Patcher > Configs > UPPatcherUserSettings`**:
 
-   - **Unity REPO Project Patcher**: Game wrapper that generates the Unity project from a R.E.P.O. build for in-editor play.
-   ::: code-group
-   ```bash [Windows]
-   https://github.com/ZehsTeam/unity-repo-project-patcher.git
-   ```
-   ```bash [Linux]
-   https://github.com/Jettcodey/unity-repo-project-patcher.git
-   ```
-   :::
+![Screenshot](/unity/2.png)
 
-### Patching the Project
+You will now see new options in the Inspector panel. Leave all the Pre filled fields as they are and only Enter the path to your game folder.
 
-1. After successfully adding the three packages above, navigate to the Unity menu bar and click `Tools > Unity Project Patcher > Configs > UPPatcherUserSettings`:
+![Screenshot](/unity/3.png)
 
-   ![Screenshot](/unity/3.png)
+Back to the Menubar and open the Patcher Window by going to **`Tools > Unity Project Patcher > Open Window`**.
 
-2. You will now see new options in the **Inspector** panel. Leave all the pre-filled fields as they are and only add the games folder path:
+![Screenshot](/unity/4.png)
 
-   ![Screenshot](/unity/4.png)
+In the newly opened `UPPatcher - RepoWrapper` window, click on `Enable BepInEx` at the bottom of the window and wait for the process to finish.
 
-3. Next, return to the menu bar and click `Tools > Unity Project Patcher > Open Window`:
+![Screenshot](/unity/5.png)
 
-   ![Screenshot](/unity/5.png)
+Once BepInEx is enabled, click `Run Patcher` at the Top of the window to begin patching the project:
 
-4. In the newly opened `UPPatcher - RepoWrapper` window, click on `Enable BepInEx` at the bottom of the window and wait for the process to finish.
+![Screenshot](/unity/6.png)
 
-   ![Screenshot](/unity/6.png)
+::: tip Expected patch behavior
+- Fresh patch time: ~25-35 minutes.
+- Unity will restart approximately 5-6 times during the process.
+- Simply click **OK** on the 4 popups when prompted after starting the process.
+:::
 
-5. Once BepInEx is enabled, click `Run Patcher` at the Top of the window to begin patching the project:
+After Unity restarts for the final time, a confirmation window will appear indicating the project has been successfully patched.
 
-   ![Screenshot](/unity/7.png)
-
-   ::: info NOTE
-   **This process WILL take a while and will restart the Unity Editor about 4-6 times.**
-
-   At the very beginning, you will receive **4** Popups. You can safely click `Ok` on each of them.
-   :::
-
-6. After the Editor restarts for the final time, a confirmation window will appear indicating the project has been successfully patched. Click `Ok`:
-
-   ![Screenshot](/unity/8.png)
-
-   ::: warning Did the Unity Project Patcher fail?
-   First, check the **Unity Console** for specific errors and verify that you've installed all [Prerequisites](#prerequisites). 
-
-   If everything looks correct, join the [R.E.P.O. Modding Server](https://discord.gg/vPJtKhYAFe) and ask for help in the [`#development`](https://discord.com/channels/1344557689979670578/1344699470176194673) channel.\
-   You will need to acquire the **Modder** role from [`≣ Channels & Roles`](https://discord.com/channels/1344557689979670578/customize-community).
-   :::
+::: warning Patching process has failed or got stuck?
+First, check the **Unity Console** for specific errors and verify that you've installed all [Prerequisites](#prerequisites).\
+If everything looks correct, join the [R.E.P.O. Modding Server](https://discord.gg/vPJtKhYAFe) and ask for help in the [`#development`](https://discord.com/channels1344557689979670578/1344699470176194673) channel.\
+You will need to acquire the **Modder** role from [`≣ Channels & Roles`](https://discord.com/channels/1344557689979670578/customize-community).
+:::
 
 Now that your Unity Project is successfully patched, we recommend adding the [REPOLib SDK](./apis/repolib/sdk/start.md) to your project to make the workflow easier.
