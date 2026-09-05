@@ -12,18 +12,18 @@ Parts of this guide differ between **Windows** and **Linux**. Make sure to insta
 :::
 
 ## Prerequisites
-Download and Install the following:\
-- **[Git](https://git-scm.com/downloads)** This is required for installing packages via Git URL in Unity.
+Download and Install the following:
+- [**Git**](https://git-scm.com/downloads) This is required for installing packages via Git URL in Unity.
 - **.NET SDK**: Required for AssetRipper to run.
    <!--NOTE: The AssetRipper build the Windows version of the UPP Wrapper uses may be updated and will require .NET SDK 10-->
    - **For Windows**: [Version 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
    - **For Linux**: [Version 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
-- **[Unity Hub](https://unity.com/download)**
-- **[Unity Editor 2022.3.62f3](https://unity.com/releases/editor/whats-new/2022.3.62f3)**
+- [**Unity Hub**](https://unity.com/download)
+- [**Unity Editor 2022.3.62f3**](https://unity.com/releases/editor/whats-new/2022.3.62f3)
 
 ## Unity Project Setup
 Create a new Unity project with the following configuration (see image below):
-- **Editor Version**: `2022.3.62f3`
+- **Editor Version**: **`2022.3.62f3`**
 - **Project Location**: Local Project
 - **Template**: 3D (Built-In Render Pipeline)
 
@@ -36,7 +36,9 @@ Click the **`+`** button at the top left of the **Package Manager** Window and c
 ![Screenshot](/unity/1.png)
 
 ::: warning
-If you had Unity open before installing **git**, it will complain about **git** not being installed. In this case, close Unity Editor and Unity Hub, and make sure they areactually fully closed. If nothing is working, try restarting your PC.
+If you had Unity open before installing [**Git**](https://git-scm.com/downloads), it will complain about [**Git**](https://git-scm.com/downloads) not being installed.\
+In this case, close the Unity Editor and Unity Hub, and make sure they are actually fully closed.\
+If nothing is working, try restarting your PC.
 :::
 
 **Unity Project Patcher**:
