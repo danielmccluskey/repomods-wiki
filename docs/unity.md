@@ -21,6 +21,11 @@ Download and Install the following:
 - [**Unity Hub**](https://unity.com/download)
 - [**Unity Editor 2022.3.62f3**](https://unity.com/releases/editor/whats-new/2022.3.62f3)
 
+::: danger Note
+Make sure you have selected the **Public** branch on Steam!\
+The **R.E.P.O. Project Patcher** does **not** support **Beta** or other branches.
+:::
+
 ## Unity Project Setup
 Create a new Unity project with the following configuration (see image below):
 - **Editor Version**: **`2022.3.62f3`**
