@@ -7,45 +7,44 @@ If not, first follow the guide in [Unity Project Setup](../../../unity.md).
 
 ## Adding REPOLib to the Project
 
-1. Navigate to the Unity menu bar and click `Window > Package Manager`.
-2. Click the `+` button in the top left of the Package Manager and choose `Add package from git URL...`:
+Navigate to the Unity menu bar and click `Window > Package Management > Package Manager`.\
+Click the **`+`** button in the top left of the Package Manager and choose **`Add package from git URL...`**
 
-   ![Screenshot](/unity/1.png)
+![Screenshot](/unity/1.png)
 
-3. Paste the **following** Unity Package link into this text field:
+Paste the **following** Unity Package link into the text field:
 
-   ![Screenshot](/unity/2.png)
+**REPOLib SDK**
+::: code-group
+```bash
+https://github.com/ZehsTeam/REPOLib-Sdk.git
+```
+:::
+   
+::: tip
+To update **REPOLib SDK**, open the Package Manager, select the `REPOLib-Sdk` package in the list, and click `Update`.
+:::
 
-   - **REPOLib SDK**: Editor tools that streamline REPOLib content creation and export.
-   ```bash
-   https://github.com/ZehsTeam/REPOLib-Sdk.git
-   ```
+After **REPOLib SDK** finishes installing, you need to add the missing REPOLib `.dll` to your project in the following steps.
 
-   ::: tip
-   To update **REPOLib SDK**, open the Package Manager, select the `REPOLib-Sdk` package in the list, and click `Update`.
-   :::
+Download **[REPOLib](https://thunderstore.io/c/repo/p/Zehs/REPOLib)** from Thunderstore and Extract the contents of the downloaded archive.\
+Copy or drag-and-drop the `REPOLib.dll` file into any location within your project's `Assets` folder:
 
-   After **REPOLib SDK** finishes installing, you need to add the missing REPOLib `.dll` to your project in the following steps.
+![Screenshot](/repolib/sdk/start/0.png)
 
-4. Download **[REPOLib](https://thunderstore.io/c/repo/p/Zehs/REPOLib)** from Thunderstore.
-5. Extract the downloaded archive.
-6. Copy or drag-and-drop the `REPOLib.dll` file into any location within your project's `Assets` folder:
+To verify the installation, right-click inside the Project window. You should see a new sub-menu option: `Create > REPOLib`:
 
-   ![Screenshot](/repolib/sdk/start/0.png)
+![Screenshot](/repolib/sdk/start/1.png)
 
-7. To verify the installation, right-click inside the Project window. You should see a new sub-menu option: `Create > REPOLib`:
+::: warning
+If you have errors for missing references to **Assembly-CSharp-firstpass.dll**, select `REPOLib.dll` in the project window, then uncheck `Validate References` in the Inspector:
 
-   ![Screenshot](/repolib/sdk/start/1.png)
+![Screenshot](/repolib/sdk/start/2.png)
+:::
 
-   ::: warning
-   If you have errors for missing references to **Assembly-CSharp-firstpass.dll**, select `REPOLib.dll` in the project window, then uncheck `Validate References` in the Inspector:
-
-   ![Screenshot](/repolib/sdk/start/2.png)
-   :::
-
-   ::: tip
-   To update **REPOLib** in the future, simply replace the existing `.dll` file with the newer version.
-   :::
+::: tip
+To update **REPOLib** in the future, simply replace the existing `.dll` file with the newer version.
+:::
 
 ## Working with Mods and Content
 
