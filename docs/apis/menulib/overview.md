@@ -1,6 +1,6 @@
 # MenuLib Overview
 
-[MenuLib](https://thunderstore.io/c/repo/p/nickklmao/MenuLib) is a programming API designed to simplify the creation and management of custom UI menus within R.E.P.O.
+[MenuLib](https://thunderstore.io/c/repo/p/REPOModding/MenuLib) is a programming API designed to simplify the creation and management of custom UI menus within R.E.P.O.
 
 ::: warning Work in Progress
 This documentation page is currently a placeholder. Detailed API references and usage examples will be added soon.
@@ -29,5 +29,5 @@ This documentation page is currently a placeholder. Detailed API references and 
    ```
 
 ## Resources
-- [Thunderstore Page](https://thunderstore.io/c/repo/p/nickklmao/MenuLib)
-- [GitHub Repository](https://github.com/Nickklmao/MenuLib)
+- [Thunderstore Page](https://thunderstore.io/c/repo/p/REPOModding/MenuLib)
+- [GitHub Repository](https://github.com/REPOModding/MenuLib)
