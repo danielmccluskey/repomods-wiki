@@ -190,7 +190,7 @@ This domain is owned by an official [Thunderstore staff member](https://github.c
 :::
 
 You can add a Thunderstore dependency to your `.csproj` like any other NuGet Package:
-> This example uses [REPOModding's MenuLib](https://thunderstore.io/c/repo/p/REPOModding/MenuLib) mod.
+> This example uses the [MenuLib](https://thunderstore.io/c/repo/p/REPOModding/MenuLib) mod.
 ```XML {2}
 <ItemGroup>
   <PackageReference Include="REPOModding-MenuLib" Version="2.*" />
