@@ -105,6 +105,14 @@ Once BepInEx is enabled, click `Run Patcher` at the Top of the window to begin p
 - Simply click **OK** on the 4 popups when prompted after starting the process.
 :::
 
+::: danger Important for Linux Modders:
+On Linux, you may see a similar "Fatal Error!" popup appear while the Patcher is running:
+
+![Screenshot](/unity/7.png)
+
+**DO NOT PRESS THE "Quit" BUTTON!** This Error will disappear on its own so just ignore it.
+:::
+
 After Unity restarts for the final time, a confirmation window will appear indicating the project has been successfully patched.
 
 ::: warning Patching process has failed or got stuck?
