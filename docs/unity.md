@@ -21,83 +21,83 @@ Download and Install the following:
 - [**Unity Hub**](https://unity.com/download)
 - [**Unity Editor 6000.3.17f1**](https://unity.com/releases/editor/whats-new/6000.3.17f1)
 
-::: danger Note
+::: danger NOTE
 Make sure you have selected the **Public** branch on Steam!\
 The **R.E.P.O. Project Patcher** does **not** support **Beta** or other branches.
 :::
 
 ## Unity Project Setup
-Create a new Unity project with the following configuration (see image below):
-- **Editor Version**: **`6000.3.17f1`**
-- **Project Location**: Local Project
-- **Template**: 3D (Built-In Render Pipeline)
+1. Create a new Unity project with the following configuration:
+   - **Editor Version**: **`6000.3.17f1`**
+   - **Project Location**: Local Project
+   - **Template**: 3D (Built-In Render Pipeline)
 
-![Screenshot](/unity/0.png)
+   ![Screenshot](/unity/0.png)
 
-Once Unity fully opens, navigate to the menubar and click `Window > Package Management > Package Manager`.\
-Click the **`+`** button in the top left of the Package Manager and choose **`Add package from git URL...`**
-and install the required Unity Packages by pasting the following links **one by one** into the Text field:
+2. Once Unity fully opens, navigate to the menubar and click `Window > Package Management > Package Manager`.\
+   Click the **`+`** button in the top left of the Package Manager, choose **`Add package from git URL...`** and install the required Unity Packages by pasting the following links **one by one** into the text field:
 
-![Screenshot](/unity/1.png)
+   ![Screenshot](/unity/1.png)
 
-::: warning
-If you had Unity open before installing git, it will complain about git not being installed.\
-In this case, close Unity Editor and Unity Hub, and make sure they are actually fully closed.\
-If nothing is working, try restarting your PC.
-:::
+   ::: warning
+   If you had Unity open before installing git, it will complain about git not being installed.\
+   In this case, close Unity Editor and Unity Hub, and make sure they are actually fully closed.\
+   If nothing is working, try restarting your PC.
+   :::
+   
+   **Unity Project Patcher**:
+   ::: code-group
+   ```bash [Windows]
+   https://github.com/nomnomab/unity-project-patcher.git
+   ```
+   ```bash [Linux]
+   https://github.com/Jettcodey/unity-project-patcher.git
+   ```
+   :::
+   
+   **Unity Project Patcher BepInEx**:
+   ::: code-group
+   ```bash [Windows]
+   https://github.com/Kesomannen/unity-project-patcher-bepinex.git
+   ```
+   ```bash [Linux]
+   https://github.com/Jettcodey/unity-project-patcher-bepinex.git
+   ```
+   :::
 
-**Unity Project Patcher**:
-::: code-group
-```bash [Windows]
-https://github.com/nomnomab/unity-project-patcher.git
-```
-```bash [Linux]
-https://github.com/Jettcodey/unity-project-patcher.git
-```
-:::
+   **Unity REPO Project Patcher**:
+   ::: code-group
+   ```bash [Windows]
+   https://github.com/ZehsTeam/unity-repo-project-patcher.git
+   ```
+   ```bash [Linux]
+   https://github.com/Jettcodey/unity-repo-project-patcher.git
+   ```
+   :::
 
-**Unity Project Patcher BepInEx**:
-::: code-group
-```bash [Windows]
-https://github.com/Kesomannen/unity-project-patcher-bepinex.git
-```
-```bash [Linux]
-https://github.com/Jettcodey/unity-project-patcher-bepinex.git
-```
-:::
-
-**Unity REPO Project Patcher**:
-::: code-group
-```bash [Windows]
-https://github.com/ZehsTeam/unity-repo-project-patcher.git
-```
-```bash [Linux]
-https://github.com/Jettcodey/unity-repo-project-patcher.git
-```
-:::
-
-Please make sure to only use these git links when setting up the R.E.P.O. Unity Project Patcher!
+   Please make sure to **only** use these git links when setting up the R.E.P.O. Unity Project Patcher!
 
 ## Run the Project Patcher
-Navigate to the Menubar and click **`Tools > Unity Project Patcher > Configs > UPPatcherUserSettings`**:
 
-![Screenshot](/unity/2.png)
+3. In the menu bar, click **`Tools > Unity Project Patcher > Configs > UPPatcherUserSettings`**:
 
-You will now see new options in the Inspector panel. Leave all the Pre filled fields as they are and only Enter the path to your game folder.
+   ![Screenshot](/unity/2.png)
 
-![Screenshot](/unity/3.png)
+   You will now see new options in the Inspector panel. Leave all the pre-filled fields as they are and only enter the path to your game folder:
 
-Back to the Menubar and open the Patcher Window by going to **`Tools > Unity Project Patcher > Open Window`**.
+   ![Screenshot](/unity/3.png)
 
-![Screenshot](/unity/4.png)
+4. Back in the menu bar, open the Patcher Window by going to **`Tools > Unity Project Patcher > Open Window`**:
 
-In the newly opened `UPPatcher - RepoWrapper` window, click on `Enable BepInEx` at the bottom of the window and wait for the process to finish.
+   ![Screenshot](/unity/4.png)
 
-![Screenshot](/unity/5.png)
+5. In the newly opened `UPPatcher - RepoWrapper` window, click `Enable BepInEx` at the bottom of the window and wait for the process to finish:
 
-Once BepInEx is enabled, click `Run Patcher` at the Top of the window to begin patching the project:
+   ![Screenshot](/unity/5.png)
 
-![Screenshot](/unity/6.png)
+6. Once BepInEx is enabled, click `Run Patcher` at the Top of the window to begin patching the project:
+
+   ![Screenshot](/unity/6.png)
 
 ::: tip Expected patch behavior
 - Fresh patch time: ~35-45 minutes.
@@ -107,18 +107,15 @@ Once BepInEx is enabled, click `Run Patcher` at the Top of the window to begin p
 
 ::: danger Important for Linux Modders:
 On Linux, you may see a similar "Fatal Error!" popup appear while the Patcher is running:
-
 ![Screenshot](/unity/7.png)
-
-**DO NOT PRESS THE "Quit" BUTTON!** This Error will disappear on its own so just ignore it.
+**DO NOT PRESS THE "Quit" BUTTON!** This error will disappear on its own, so just ignore it.
 :::
 
 After Unity restarts for the final time, a confirmation window will appear indicating the project has been successfully patched.
 
 ::: warning Patching process has failed or got stuck?
 First, check the **Unity Console** for specific errors and verify that you've installed all [Prerequisites](#prerequisites).\
-If everything looks correct, join the [R.E.P.O. Modding Server](https://discord.gg/vPJtKhYAFe) and ask for help in the [`#development`](https://discord.com/channels1344557689979670578/1344699470176194673) channel.\
-You will need to acquire the **Modder** role from [`≣ Channels & Roles`](https://discord.com/channels/1344557689979670578/customize-community).
+If everything looks correct, join the [R.E.P.O. Modding Server](https://discord.gg/vPJtKhYAFe), acquire the **Modder** role from [`≣ Channels & Roles`](https://discord.com/channels/1344557689979670578/customize-community), and ask for help in the [`#development`](https://discord.com/channels1344557689979670578/1344699470176194673) channel.
 :::
 
 Now that your Unity Project is successfully patched, we recommend adding the [REPOLib SDK](./apis/repolib/sdk/start.md) to your project to make the workflow easier.
