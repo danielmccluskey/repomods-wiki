@@ -14,7 +14,7 @@ Parts of this guide differ between **Windows** and **Linux**. Make sure to insta
 ## Prerequisites
 Download and Install the following:
 - [**Git**](https://git-scm.com/downloads) This is required for installing packages via Git URL in Unity.
-- [**.NET SDK 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) Required for AssetRipper to run. 
+- [**.NET SDK 10.0**](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) Required for AssetRipper to run. 
 - [**Unity Hub**](https://unity.com/download)
 - [**Unity Editor 6000.3.17f1**](https://unity.com/releases/editor/whats-new/6000.3.17f1)
 
