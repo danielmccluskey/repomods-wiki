@@ -35,7 +35,7 @@ The **R.E.P.O. Project Patcher** does **not** support **Beta** or other branches
    ![Screenshot](/unity/0.png)
 
 2. Once Unity fully opens, navigate to the menubar and click `Window > Package Management > Package Manager`.\
-   Click the **`+`** button in the top left of the Package Manager, choose **`Add package from git URL...`** and install the required Unity Packages by pasting the following links **one by one** into the text field:
+   Click the **`+`** button in the top left of the Package Manager, choose **`Install package from git URL...`** and install the required Unity Packages by pasting the following links **one by one** into the text field:
 
    ![Screenshot](/unity/1.png)
 
