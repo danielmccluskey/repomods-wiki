@@ -1,4 +1,11 @@
 # R.E.P.O. Unity Project Setup
+
+::: danger WARNING
+Due to the recent upgrade to Unity 6, the patcher is facing several issues that are causing missing or corrupted project assets.
+
+However, these issues are actively being fixed, so please be patient in the meantime. We recommend backing up or preserving your previous patched projects, so you can recover any missing assets if needed.
+:::
+
 A guide for setting up your Unity Project to create mods for R.E.P.O.\
 The Unity workflow is primarily needed for creating Valuables, Shop Items, Enemies, Levels and Cosmetics.
 
